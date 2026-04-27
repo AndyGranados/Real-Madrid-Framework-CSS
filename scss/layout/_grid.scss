@@ -1,0 +1,40 @@
+@use 'sass:math';
+@use '../variables' as *;
+@use '../mixins' as m;
+
+$gutter: 15px;
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $gutter;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+  width: 100%;
+  padding: 0 $gutter;
+}
+}
+
+@include  m.respond(md) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      width: math.percentage(math.div($i, 12));
+    }
+  }
+}
+
+@include respond(lg) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      width: math.percentage(math.div($i, 12));
+    }
+  }
+}
