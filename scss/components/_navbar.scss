@@ -1,0 +1,122 @@
+@use 'sass:color';
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.navbar {
+  background: linear-gradient(90deg, $color-secondary, color.adjust($color-secondary, $lightness: -10%));
+  padding: 1rem 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+
+  &__container {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__brand {
+    color: $color-accent;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+
+  
+  &__toggle-check {
+    display: none; 
+  }
+
+  &__toggle-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 20px;
+    cursor: pointer;
+    padding: 2px 0;
+
+    @include respond(md) {
+      display: none; 
+    }
+
+    span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: $color-accent;
+      border-radius: 2px;
+      transition: $transition-base;
+    }
+  }
+
+  
+  &__toggle-check:checked ~ &__container &__toggle-label span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  &__toggle-check:checked ~ &__container &__toggle-label span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  &__toggle-check:checked ~ &__container &__toggle-label span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  
+  &__nav {
+    display: none;
+    list-style: none;
+    width: 100%;
+    flex-direction: column;
+    padding: 0.75rem 0 0.25rem;
+    gap: 0;
+
+    @include respond(md) {
+      display: flex !important; 
+      flex-direction: row;
+      width: auto;
+      padding: 0;
+      gap: 1.5rem;
+    }
+  }
+
+  
+  &__toggle-check:checked ~ &__container &__nav {
+    display: flex;
+  }
+
+  &__link {
+    color: $color-primary;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: $transition-base;
+    padding: 0.4rem 0;
+    display: block;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: $color-accent;
+      transition: 0.3s;
+    }
+
+    &:hover::after,
+    &--active::after {
+      width: 100%;
+    }
+
+    &:hover,
+    &--active {
+      color: $color-accent;
+    }
+  }
+}
