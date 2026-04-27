@@ -1,0 +1,41 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.card {
+  background-color: $color-primary;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: $transition-base;
+  border: 1px solid #eaeaea;
+
+  &:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 10px 20px rgba(0, 82, 159, 0.25);
+    @include madrid-border;
+  }
+
+  &__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__body {
+    padding: 1.5rem;
+  }
+
+  &__title {
+    color: $color-secondary;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    font-weight: bold;
+  }
+
+  &__text {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+}
