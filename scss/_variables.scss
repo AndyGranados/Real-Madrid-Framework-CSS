@@ -10,3 +10,19 @@ $color-success: #28a745;
 $color-danger: #dc3545;
 $color-warning: #ffc107;
 $color-info: #17a2b8;
+
+$font-family-base: 'Roboto', sans-serif;
+$font-size-base: 16px;
+
+$border-radius: 8px;
+$transition-base: all 0.3s ease;
+
+$gutter: 15px;
+
+$shadow-madrid: 0 0 10px $color-dorado-madrid;
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 1024px
+);
