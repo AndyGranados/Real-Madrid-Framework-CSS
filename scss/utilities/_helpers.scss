@@ -1,0 +1,15 @@
+$rm-espacios: (1: 0.25rem, 2: 0.5rem, 3: 1rem, 4: 1.5rem, 5: 3rem);
+
+@each $key, $val in $rm-espacios {
+  .rm-m-#{$key}  { margin: $val; }
+  .rm-mt-#{$key} { margin-top: $val; }
+  .rm-mb-#{$key} { margin-bottom: $val; }
+  .rm-ml-#{$key} { margin-left: $val; }
+  .rm-mr-#{$key} { margin-right: $val; }
+
+  .rm-p-#{$key}  { padding: $val; }
+  .rm-pt-#{$key} { padding-top: $val; }
+  .rm-pb-#{$key} { padding-bottom: $val; }
+  .rm-pl-#{$key} { padding-left: $val; }
+  .rm-pr-#{$key} { padding-right: $val; }
+}
