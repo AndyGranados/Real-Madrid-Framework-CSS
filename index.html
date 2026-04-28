@@ -1,13 +1,316 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Framework Madrid</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madrid CSS — Introducción</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="scss/main.css">
+  <link rel="stylesheet" href="scss/docs.css">
 </head>
-<body>
-    <h1>Framework Madrid</h1>
-    <p>Bienvenido a Framework Madrid, tu recurso para aprender sobre desarrollo web y frameworks. Aquí encontrarás tutoriales, guías y recursos para mejorar tus habilidades de programación.</p>
-    <h2>Recursos</h2>
+<body data-page="index">
+
+<input type="checkbox" id="sidebar-css-toggle" class="docs-sidebar-toggle">
+<div class="docs-layout">
+
+  <nav class="docs-sidebar" id="docs-sidebar">
+    <div class="docs-sidebar__logo">
+      <div class="docs-sidebar__logo-icon">RM</div>
+      <div class="docs-sidebar__logo-text">
+        Madrid CSS
+        <span>Framework Docs</span>
+      </div>
+    </div>
+    <div class="docs-sidebar__section">Inicio</div>
+    <ul class="docs-sidebar__nav">
+      <li><a href="index.html" class="nav-link active"><span class="nav-icon">🏠</span> Introducción</a></li>
+    </ul>
+    <div class="docs-sidebar__section">Componentes</div>
+    <ul class="docs-sidebar__nav">
+      <li><a href="buttons.html" class="nav-link"><span class="nav-icon">🔘</span> Botones</a></li>
+      <li><a href="cards.html" class="nav-link"><span class="nav-icon">🃏</span> Cards</a></li>
+      <li><a href="navbar.html" class="nav-link"><span class="nav-icon">🔝</span> Navbar</a></li>
+      <li><a href="alerts.html" class="nav-link"><span class="nav-icon">🔔</span> Alertas</a></li>
+      <li><a href="badges.html" class="nav-link"><span class="nav-icon">🏷️</span> Badges</a></li>
+      <li><a href="forms.html" class="nav-link"><span class="nav-icon">📝</span> Formularios</a></li>
+      <li><a href="tables.html" class="nav-link"><span class="nav-icon">📊</span> Tablas</a></li>
+    </ul>
+    <div class="docs-sidebar__section">Layout</div>
+    <ul class="docs-sidebar__nav">
+      <li><a href="grid.html" class="nav-link"><span class="nav-icon">⚙️</span> Grid System</a></li>
+    </ul>
+    <div class="docs-sidebar__section">Utilidades</div>
+    <ul class="docs-sidebar__nav">
+      <li><a href="helpers.html" class="nav-link"><span class="nav-icon">🛠️</span> Helpers</a></li>
+      <li><a href="football.html" class="nav-link"><span class="nav-icon">⚽</span> Modo Fútbol</a></li>
+    </ul>
+  </nav>
+
+  <main class="docs-main">
+
+    <header class="docs-page-header docs-page-header--wave" data-icon="⚽">
+      <div>
+        <div class="docs-page-header__badge">v1.0 · SASS Framework</div>
+        <h1>Madrid CSS Framework</h1>
+        <p>Un framework CSS moderno inspirado en la identidad del <strong class="rm-color-dorado">Real Madrid C.F.</strong> — construido con SASS, basado en componentes reutilizables y pensado para desarrolladores que quieren velocidad con estilo.</p>
+        <div class="rm-flex rm-flex-envolver rm-gap-3 rm-mt-4">
+          <a href="buttons.html" class="rm-btn rm-btn-dorado rm-btn-md">Explorar componentes →</a>
+          <a href="grid.html" class="rm-btn rm-btn-blanco rm-btn-md">Ver Grid System</a>
+        </div>
+      </div>
+      <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" class="docs-wave">
+        <path d="M0,30 C300,60 900,0 1200,30 L1200,60 L0,60 Z" fill="#f7f9fc"/>
+      </svg>
+    </header>
+
+    <div class="docs-content">
+
+      <div class="rm-fila rm-flex-envolver rm-gap-3 rm-mb-4">
+        <div class="rm-stat rm-stat--azul">
+          <div class="rm-stat__valor rm-color-azul">7</div>
+          <div class="rm-stat__label">Componentes</div>
+        </div>
+        <div class="rm-stat rm-stat--dorado">
+          <div class="rm-stat__valor rm-color-dorado">12</div>
+          <div class="rm-stat__label">Columnas Grid</div>
+        </div>
+        <div class="rm-stat rm-stat--exito">
+          <div class="rm-stat__valor rm-color-exito">SASS</div>
+          <div class="rm-stat__label">Preprocesador</div>
+        </div>
+        <div class="rm-stat rm-stat--error">
+          <div class="rm-stat__valor rm-color-error">BEM</div>
+          <div class="rm-stat__label">Metodología</div>
+        </div>
+      </div>
+
+      <div class="docs-section" id="inspiracion">
+        <div class="docs-section__title">¿En qué está inspirado?</div>
+        <p class="docs-section__desc">Madrid CSS toma su identidad visual directamente del <strong>Real Madrid Club de Fútbol</strong> — uno de los clubes más laureados de la historia. Sus tres colores institucionales definen toda la paleta del framework.</p>
+
+        <div class="rm-fila rm-flex-envolver rm-gap-3 rm-mb-4">
+          <div class="rm-swatch">
+            <div class="rm-swatch__bloque rm-swatch--blanco"></div>
+            <div class="rm-swatch__info">
+              <div class="rm-swatch__nombre">Blanco Madrid</div>
+              <div class="rm-swatch__hex">#FFFFFF · $color-primary</div>
+            </div>
+          </div>
+          <div class="rm-swatch">
+            <div class="rm-swatch__bloque rm-fondo-azul"></div>
+            <div class="rm-swatch__info">
+              <div class="rm-swatch__nombre">Azul Madrid</div>
+              <div class="rm-swatch__hex">#00529F · $color-secondary</div>
+            </div>
+          </div>
+          <div class="rm-swatch">
+            <div class="rm-swatch__bloque rm-fondo-dorado"></div>
+            <div class="rm-swatch__info">
+              <div class="rm-swatch__nombre">Dorado Madrid</div>
+              <div class="rm-swatch__hex">#FEBE10 · $color-accent</div>
+            </div>
+          </div>
+          <div class="rm-swatch">
+            <div class="rm-swatch__bloque rm-fondo-exito"></div>
+            <div class="rm-swatch__info">
+              <div class="rm-swatch__nombre">Success</div>
+              <div class="rm-swatch__hex">#28a745 · $color-success</div>
+            </div>
+          </div>
+          <div class="rm-swatch">
+            <div class="rm-swatch__bloque rm-fondo-error"></div>
+            <div class="rm-swatch__info">
+              <div class="rm-swatch__nombre">Danger</div>
+              <div class="rm-swatch__hex">#dc3545 · $color-danger</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="docs-callout docs-callout--info">
+          <span class="docs-callout__icon">ℹ️</span>
+          <div>Los colores están definidos como variables SASS en <code>_variables.scss</code>. Puedes personalizarlos fácilmente para adaptar el framework a cualquier proyecto.</div>
+        </div>
+      </div>
+
+      <div class="docs-section" id="instalacion">
+        <div class="docs-section__title">Instalación y uso</div>
+        <p class="docs-section__desc">Incluye el CSS compilado en tu HTML y comienza a usar las clases del framework al instante.</p>
+
+        <div class="docs-demo">
+          <div class="docs-demo__label">📄 <span>HTML</span> — Estructura base recomendada</div>
+          <div class="docs-code">
+            <div class="docs-code__header">
+              <span class="docs-code__lang">HTML</span>
+            </div>
+            <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;link rel="stylesheet" href="scss/main.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;nav class="navbar"&gt;
+    &lt;div class="navbar__container"&gt;
+      &lt;a href="#" class="navbar__brand"&gt;Mi Proyecto&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;div class="rm-contenedor rm-mt-4"&gt;
+    &lt;div class="rm-fila"&gt;
+      &lt;div class="rm-col-12 rm-col-md-6"&gt;
+        &lt;h1&gt;Hola Madrid CSS!&lt;/h1&gt;
+        &lt;a href="#" class="rm-btn rm-btn-azul rm-btn-md"&gt;Comenzar&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="docs-section" id="estructura">
+        <div class="docs-section__title">Estructura SASS</div>
+        <p class="docs-section__desc">El framework está organizado siguiendo la arquitectura 7-1 simplificada de SASS.</p>
+
+        <div class="docs-demo">
+          <div class="docs-demo__label">📁 <span>Estructura</span> de archivos</div>
+          <div class="docs-code">
+            <div class="docs-code__header">
+              <span class="docs-code__lang">SASS</span>
+            </div>
+            <pre>scss/
+├── main.scss              ← Punto de entrada principal
+├── _variables.scss        ← Colores, tipografía, breakpoints
+├── _mixins.scss           ← respond(), flex-center(), button-base()...
+├── base/
+│   └── _reset.scss        ← Reset CSS normalizado
+├── layout/
+│   └── _grid.scss         ← Sistema de 12 columnas responsivo
+├── components/
+│   ├── _buttons.scss      ← .rm-btn, .rm-btn-azul, .rm-btn-dorado...
+│   ├── _cards.scss        ← .card, .card__body, .card__title...
+│   ├── _navbar.scss       ← .navbar, .navbar__brand...
+│   ├── _alerts.scss       ← .alert--success/danger/warning/info
+│   ├── _badges.scss       ← .badge, .badge--pill
+│   ├── _forms.scss        ← .form__control, .form__label...
+│   └── _tables.scss       ← .table, .table--striped, --hover
+└── utilities/
+    ├── _helpers.scss      ← Espaciado, display, texto, stats, navcards...
+    └── _footbal.scss      ← .rm-field, .rm-player ⚽</pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="docs-section" id="variables">
+        <div class="docs-section__title">Variables disponibles</div>
+        <p class="docs-section__desc">Todas las variables están en <code>_variables.scss</code> y puedes sobreescribirlas fácilmente.</p>
+
+        <table class="docs-props">
+          <thead><tr><th>Variable</th><th>Valor</th><th>Descripción</th></tr></thead>
+          <tbody>
+            <tr><td><code>$color-primary</code></td><td><code>#FFFFFF</code></td><td>Blanco — color base del framework</td></tr>
+            <tr><td><code>$color-secondary</code></td><td><code>#00529F</code></td><td>Azul Madrid — color principal</td></tr>
+            <tr><td><code>$color-accent</code></td><td><code>#FEBE10</code></td><td>Dorado Madrid — énfasis y glow</td></tr>
+            <tr><td><code>$color-success</code></td><td><code>#28a745</code></td><td>Verde — alertas positivas</td></tr>
+            <tr><td><code>$color-danger</code></td><td><code>#dc3545</code></td><td>Rojo — alertas de error</td></tr>
+            <tr><td><code>$font-family-base</code></td><td><code>'Roboto', sans-serif</code></td><td>Tipografía base</td></tr>
+            <tr><td><code>$border-radius</code></td><td><code>8px</code></td><td>Redondeo de bordes</td></tr>
+            <tr><td><code>$transition-base</code></td><td><code>all 0.3s ease</code></td><td>Transición global</td></tr>
+            <tr><td><code>$gutter</code></td><td><code>15px</code></td><td>Espaciado del grid</td></tr>
+            <tr><td><code>$shadow-madrid</code></td><td><code>0 0 10px #FEBE10</code></td><td>Glow dorado especial</td></tr>
+            <tr><td><code>$breakpoints</code></td><td><code>md:768px, lg:1024px</code></td><td>Breakpoints responsivos</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="docs-section" id="mixins">
+        <div class="docs-section__title">Mixins disponibles</div>
+        <p class="docs-section__desc">Los mixins encapsulan lógica repetible. Úsalos en tus propios archivos SASS.</p>
+
+        <table class="docs-props">
+          <thead><tr><th>Mixin</th><th>Parámetros</th><th>Qué hace</th></tr></thead>
+          <tbody>
+            <tr><td><code>respond($bp)</code></td><td><code>md</code> o <code>lg</code></td><td>Media query responsiva según breakpoint</td></tr>
+            <tr><td><code>flex-center</code></td><td>—</td><td>display:flex + justify + align center</td></tr>
+            <tr><td><code>button-base</code></td><td>—</td><td>Estilos base comunes para botones</td></tr>
+            <tr><td><code>madrid-glow</code></td><td>—</td><td>Box-shadow dorado del Real Madrid</td></tr>
+            <tr><td><code>madrid-border</code></td><td>—</td><td>Borde 2px dorado</td></tr>
+            <tr><td><code>container</code></td><td>—</td><td>Contenedor centrado max-width 1200px</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="docs-section" id="features">
+        <div class="docs-section__title">Características del framework</div>
+        <div class="rm-fila rm-flex-envolver rm-gap-3">
+          <div class="rm-feature rm-feature--azul">
+            <div class="rm-feature__icono">📐</div>
+            <div class="rm-feature__titulo">Grid de 12 columnas</div>
+            <div class="rm-feature__desc">Sistema responsivo con breakpoints md (768px) y lg (1024px). Clases <code>.rm-col-N</code>, <code>.rm-col-md-N</code>, <code>.rm-col-lg-N</code>.</div>
+          </div>
+          <div class="rm-feature rm-feature--dorado">
+            <div class="rm-feature__icono">🧩</div>
+            <div class="rm-feature__titulo">Componentes BEM</div>
+            <div class="rm-feature__desc">Botones, cards, navbar, alertas, badges, forms y tablas con nomenclatura BEM clara y predecible.</div>
+          </div>
+          <div class="rm-feature rm-feature--exito">
+            <div class="rm-feature__icono">⚽</div>
+            <div class="rm-feature__titulo">Modo Fútbol</div>
+            <div class="rm-feature__desc">Módulo especial <code>_footbal.scss</code> para renderizar una cancha y posicionar jugadores con CSS puro.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="docs-section" id="navegacion">
+        <div class="docs-section__title">Explorar el manual</div>
+        <div class="rm-fila rm-flex-envolver rm-gap-3">
+          <a href="buttons.html" class="rm-navcard">
+            <span class="rm-navcard__icono">🔘</span>
+            <div>
+              <div class="rm-navcard__titulo">Botones</div>
+              <div class="rm-navcard__sub">4 variantes + 3 tamaños</div>
+            </div>
+          </a>
+          <a href="cards.html" class="rm-navcard">
+            <span class="rm-navcard__icono">🃏</span>
+            <div>
+              <div class="rm-navcard__titulo">Cards</div>
+              <div class="rm-navcard__sub">Con imagen, body, título</div>
+            </div>
+          </a>
+          <a href="alerts.html" class="rm-navcard">
+            <span class="rm-navcard__icono">🔔</span>
+            <div>
+              <div class="rm-navcard__titulo">Alertas</div>
+              <div class="rm-navcard__sub">4 estados semánticos</div>
+            </div>
+          </a>
+          <a href="grid.html" class="rm-navcard">
+            <span class="rm-navcard__icono">⚙️</span>
+            <div>
+              <div class="rm-navcard__titulo">Grid System</div>
+              <div class="rm-navcard__sub">12 cols · 2 breakpoints</div>
+            </div>
+          </a>
+          <a href="football.html" class="rm-navcard rm-navcard--destacado">
+            <span class="rm-navcard__icono">⚽</span>
+            <div>
+              <div class="rm-navcard__titulo">Modo Fútbol</div>
+              <div class="rm-navcard__sub">Cancha interactiva CSS</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<label for="sidebar-css-toggle" class="docs-toggle">☰</label>
 </body>
 </html>
