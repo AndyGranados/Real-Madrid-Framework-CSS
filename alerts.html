@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alertas — Madrid CSS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="scss/main.css"><link rel="stylesheet" href="scss/docs.css">
+</head>
+<body data-page="alerts">
+
+<input type="checkbox" id="sidebar-css-toggle" class="docs-sidebar-toggle">
+<div class="docs-layout">
+  <nav class="docs-sidebar" id="docs-sidebar"><div class="docs-sidebar__logo">
+  <div class="docs-sidebar__logo-icon">RM</div>
+  <div class="docs-sidebar__logo-text">
+    Madrid CSS
+    <span>Framework Docs</span>
+  </div>
+</div>
+
+<div class="docs-sidebar__section">Inicio</div>
+<ul class="docs-sidebar__nav">
+  <li><a href="index.html" class="nav-link "><span class="nav-icon">🏠</span> Introducción</a></li>
+</ul>
+
+<div class="docs-sidebar__section">Componentes</div>
+<ul class="docs-sidebar__nav">
+  <li><a href="buttons.html" class="nav-link "><span class="nav-icon">🔘</span> Botones</a></li>
+  <li><a href="cards.html" class="nav-link "><span class="nav-icon">🃏</span> Cards</a></li>
+  <li><a href="navbar.html" class="nav-link "><span class="nav-icon">🔝</span> Navbar</a></li>
+  <li><a href="alerts.html" class="nav-link active"><span class="nav-icon">🔔</span> Alertas</a></li>
+  <li><a href="badges.html" class="nav-link "><span class="nav-icon">🏷️</span> Badges</a></li>
+  <li><a href="forms.html" class="nav-link "><span class="nav-icon">📝</span> Formularios</a></li>
+  <li><a href="tables.html" class="nav-link "><span class="nav-icon">📊</span> Tablas</a></li>
+</ul>
+
+<div class="docs-sidebar__section">Layout</div>
+<ul class="docs-sidebar__nav">
+  <li><a href="grid.html" class="nav-link "><span class="nav-icon">⚙️</span> Grid System</a></li>
+</ul>
+<div class="docs-sidebar__section">Utilidades</div>
+
+<ul class="docs-sidebar__nav">
+  <li><a href="helpers.html" class="nav-link "><span class="nav-icon">🛠️</span> Helpers</a></li>
+  <li><a href="football.html" class="nav-link "><span class="nav-icon">⚽</span> Modo Fútbol</a></li>
+</ul></nav>
+
+  <main class="docs-main">
+    <header class="docs-page-header" data-icon="🔔">
+      <div class="docs-page-header__badge">Componente</div>
+      <h1>Alertas</h1>
+      <p>Mensajes de estado semántico. Cuatro variantes: success, danger, warning e info. Con hover dorado automático.</p>
+    </header>
+
+    <div class="docs-content">
+      <div class="docs-section" id="variantes">
+        <div class="docs-section__title">Las 4 variantes</div>
+        <p class="docs-section__desc">Cada variante comunica un estado diferente al usuario. Usa el modificador BEM <code>alert--[estado]</code>.</p>
+        <div class="docs-demo">
+          <div class="docs-demo__label">👁️ <span>Vista previa</span> — pasa el cursor para ver el glow</div>
+          <div class="docs-demo__preview--block" >
+            <div class="alert alert--success">✅ <strong>¡Gol!</strong> El jugador fue registrado exitosamente en el sistema.</div>
+            <div class="alert alert--danger">❌ <strong>Error:</strong> No se pudo conectar con el servidor de la liga.</div>
+            <div class="alert alert--warning">⚠️ <strong>Atención:</strong> El contrato del jugador expira en 30 días.</div>
+            <div class="alert alert--info">ℹ️ <strong>Info:</strong> El partido comenzará a las 21:00 hora local.</div>
+          </div>
+
+          <div class="docs-code">
+            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
+            <pre>&lt;div class="alert alert--success"&gt;✅ Operación completada con éxito.&lt;/div&gt;
+&lt;div class="alert alert--danger"&gt;❌ Se produjo un error.&lt;/div&gt;
+&lt;div class="alert alert--warning"&gt;⚠️ Atención requerida.&lt;/div&gt;
+&lt;div class="alert alert--info"&gt;ℹ️ Información del sistema.&lt;/div&gt;</pre>
+          </div>
+        </div>
+
+        <table class="docs-props">
+          <thead><tr><th>Clase</th><th>Fondo</th><th>Texto</th><th>Uso recomendado</th></tr></thead>
+          <tbody>
+            <tr><td><code>.alert--success</code></td><td>Verde claro</td><td>Verde oscuro</td><td>Confirmaciones, éxito de operación</td></tr>
+            <tr><td><code>.alert--danger</code></td><td>Rojo claro</td><td>Rojo oscuro</td><td>Errores, acciones destructivas</td></tr>
+            <tr><td><code>.alert--warning</code></td><td>Amarillo claro</td><td>Marrón dorado</td><td>Advertencias, acciones irreversibles</td></tr>
+            <tr><td><code>.alert--info</code></td><td>Azul claro</td><td>Azul oscuro</td><td>Información general, tips</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="docs-section" id="practica">
+        <div class="docs-section__title">🏋️ Práctica — Alertas</div>
+        <div class="docs-practice">
+          <div class="docs-practice__header">
+            <div class="docs-practice__icon">⚡</div>
+            <div><div class="docs-practice__title">Ejercicio — Panel de notificaciones</div><div class="docs-practice__sub">Nivel: Principiante · 3 min</div></div>
+          </div>
+          <ol>
+            <li>Crea una alerta de <strong>éxito</strong> informando que el partido fue programado</li>
+            <li>Crea una alerta de <strong>advertencia</strong> sobre el estado del campo</li>
+            <li>Crea una alerta de <strong>info</strong> con el horario del próximo partido</li>
+          </ol>
+          <div class="docs-practice__editor">
+            <div class="docs-practice__editor-bar"><span class="docs-practice__editor-label">✏️ Tu código</span></div>
+            <textarea placeholder="&lt;div class=&quot;alert alert--???&quot;&gt;Tu mensaje aquí&lt;/div&gt;"></textarea>
+          </div>
+          <div class="docs-practice__result-mt">
+            <div class="docs-practice__result-label">🖥️ Resultado</div>
+            <div class="docs-practice__result"><div class="docs-practice__result-content" class="docs-result-empty">El resultado aparecerá aquí...</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<label for="sidebar-css-toggle" class="docs-toggle">☰</label>
+</body>
+</html>
