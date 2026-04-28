@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modo Fútbol — Madrid CSS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="scss/main.css"><link rel="stylesheet" href="scss/docs.css">
+  <style>
+    .rm-field-lines::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 0; right: 0;
+      height: 2px;
+      background: rgba(255,255,255,0.3);
+    }
+    .rm-field-lines::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 80px; height: 80px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .field-goal {
+      position: absolute;
+      left: 50%; transform: translateX(-50%);
+      width: 120px; height: 15px;
+      border: 2px solid rgba(255,255,255,0.4);
+      border-bottom: none;
+    }
+    .field-goal-top { top: 0; }
+    .field-goal-bottom { bottom: 0; border-bottom: 2px solid rgba(255,255,255,0.4); border-top: none; }
+  </style>
+</head>
+<body data-page="football">
+
+<input type="checkbox" id="sidebar-css-toggle" class="docs-sidebar-toggle">
+<div class="docs-layout">
+  <nav class="docs-sidebar" id="docs-sidebar"><div class="docs-sidebar__logo">
+  <div class="docs-sidebar__logo-icon">RM</div>
+  <div class="docs-sidebar__logo-text">
+    Madrid CSS
+    <span>Framework Docs</span>
+  </div>
+</div>
+<div class="docs-sidebar__section">Inicio</div>
+<ul class="docs-sidebar__nav">
+  <li><a href="index.html" class="nav-link "><span class="nav-icon">🏠</span> Introducción</a></li>
+</ul>
+<div class="docs-sidebar__section">Componentes</div>
+<ul class="docs-sidebar__nav">
+  <li><a href="buttons.html" class="nav-link "><span class="nav-icon">🔘</span> Botones</a></li>
+  <li><a href="cards.html" class="nav-link "><span class="nav-icon">🃏</span> Cards</a></li>
+  <li><a href="navbar.html" class="nav-link "><span class="nav-icon">🔝</span> Navbar</a></li>
+  <li><a href="alerts.html" class="nav-link "><span class="nav-icon">🔔</span> Alertas</a></li>
+  <li><a href="badges.html" class="nav-link "><span class="nav-icon">🏷️</span> Badges</a></li>
+  <li><a href="forms.html" class="nav-link "><span class="nav-icon">📝</span> Formularios</a></li>
+  <li><a href="tables.html" class="nav-link "><span class="nav-icon">📊</span> Tablas</a></li>
+</ul>
+<div class="docs-sidebar__section">Layout</div>
+<ul class="docs-sidebar__nav">
+  <li><a href="grid.html" class="nav-link "><span class="nav-icon">⚙️</span> Grid System</a></li>
+</ul>
+<div class="docs-sidebar__section">Utilidades</div>
+<ul class="docs-sidebar__nav">
+  <li><a href="helpers.html" class="nav-link "><span class="nav-icon">🛠️</span> Helpers</a></li>
+  <li><a href="football.html" class="nav-link active"><span class="nav-icon">⚽</span> Modo Fútbol</a></li>
+</ul></nav>
+  <main class="docs-main">
+    <header class="docs-page-header" data-icon="⚽" >
+      <div class="docs-page-header__badge" class="docs-page-header__badge docs-page-header__badge--football">Modo Especial</div>
+      <h1>⚽ Modo Fútbol</h1>
+      <p>El módulo estrella del framework. Renderiza una cancha de fútbol con CSS puro y posiciona jugadores usando clases predefinidas.</p>
+    </header>
+
+    <div class="docs-content">
+
+      <div class="docs-section" id="clases">
+        <div class="docs-section__title">Clases disponibles</div>
+        <div class="rm-fila" class="rm-fila rm-flex-envolver rm-gap-3 rm-mb-4">
+          <div class="rm-feature">
+            <table class="docs-props">
+              <thead><tr><th>Clase</th><th>Posición</th></tr></thead>
+              <tbody>
+                <tr><td><code>.rm-field</code></td><td>Cancha verde (400px)</td></tr>
+                <tr><td><code>.rm-player</code></td><td>Jugador (etiqueta)</td></tr>
+                <tr><td><code>.portero</code></td><td>90% top, 50% left</td></tr>
+                <tr><td><code>.defensa-izquierdo</code></td><td>70% top, 20% left</td></tr>
+                <tr><td><code>.defensa-central</code></td><td>70% top, 50% left</td></tr>
+                <tr><td><code>.defensa-derecho</code></td><td>70% top, 80% left</td></tr>
+                <tr><td><code>.medio-izquierdo</code></td><td>50% top, 20% left</td></tr>
+                <tr><td><code>.medio-central</code></td><td>50% top, 50% left</td></tr>
+                <tr><td><code>.medio-derecho</code></td><td>50% top, 80% left</td></tr>
+                <tr><td><code>.extremo-izquierdo</code></td><td>25% top, 20% left</td></tr>
+                <tr><td><code>.delantero-centro</code></td><td>20% top, 50% left</td></tr>
+                <tr><td><code>.extremo-derecho</code></td><td>25% top, 80% left</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="docs-section" id="demo-cancha">
+        <div class="docs-section__title">Demo — Formación 4-3-3</div>
+        <div class="docs-demo">
+          <div class="docs-demo__label">👁️ <span>Vista previa</span> — pasa el cursor por los jugadores</div>
+          <div class="docs-demo__preview--block" class="docs-demo__preview docs-demo__preview--dark">
+            <div class="rm-field rm-field-lines">
+              <div class="field-goal field-goal-top"></div>
+              <div class="field-goal field-goal-bottom"></div>
+              <span class="rm-player portero">Courtois 1</span>
+              <span class="rm-player defensa-izquierdo">Mendy 23</span>
+              <span class="rm-player defensa-central" class="rm-player defensa-izquierdo">Alaba 4</span>
+              <span class="rm-player defensa-central" class="rm-player defensa-derecho">Rüdiger 22</span>
+              <span class="rm-player defensa-derecho">Carvajal 2</span>
+              <span class="rm-player medio-izquierdo">Camavinga 12</span>
+              <span class="rm-player medio-central">Tchouameni 18</span>
+              <span class="rm-player medio-derecho">Valverde 15</span>
+              <span class="rm-player extremo-izquierdo">Vinícius 7</span>
+              <span class="rm-player delantero-centro">Mbappé 9</span>
+              <span class="rm-player extremo-derecho">Rodrygo 11</span>
+            </div>
+          </div>
+          <div class="docs-code">
+            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
+            <pre>&lt;div class="rm-field"&gt;
+
+  &lt;!-- Portero --&gt;
+  &lt;span class="rm-player portero"&gt;Courtois 1&lt;/span&gt;
+
+  &lt;!-- Defensas --&gt;
+  &lt;span class="rm-player defensa-izquierdo"&gt;Mendy 23&lt;/span&gt;
+  &lt;span class="rm-player defensa-central"&gt;Alaba 4&lt;/span&gt;
+  &lt;span class="rm-player defensa-derecho"&gt;Carvajal 2&lt;/span&gt;
+
+  &lt;!-- Mediocampo --&gt;
+  &lt;span class="rm-player medio-izquierdo"&gt;Camavinga 12&lt;/span&gt;
+  &lt;span class="rm-player medio-central"&gt;Tchouaméni 18&lt;/span&gt;
+  &lt;span class="rm-player medio-derecho"&gt;Valverde 15&lt;/span&gt;
+
+  &lt;!-- Delantera --&gt;
+  &lt;span class="rm-player extremo-izquierdo"&gt;Vinícius 7&lt;/span&gt;
+  &lt;span class="rm-player delantero-centro"&gt;Mbappé 9&lt;/span&gt;
+  &lt;span class="rm-player extremo-derecho"&gt;Rodrygo 11&lt;/span&gt;
+
+&lt;/div&gt;</pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="docs-section" id="personalizar">
+        <div class="docs-section__title">Personalizar posiciones</div>
+        <p class="docs-section__desc">Puedes sobreescribir la posición con estilos inline para formaciones personalizadas.</p>
+        <div class="docs-demo">
+          <div class="docs-demo__label">💡 <span>Técnica</span> — posición custom con inline style</div>
+          <div class="docs-code">
+            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
+            <pre>&lt;!-- Sobreescribir posición con inline style --&gt;
+&lt;span class="rm-player defensa-central" style="left: 37%;"&gt;
+  Alaba 4
+&lt;/span&gt;
+&lt;span class="rm-player defensa-central" style="left: 63%;"&gt;
+  Rüdiger 22
+&lt;/span&gt;
+
+&lt;!-- Posición 100% custom --&gt;
+&lt;span class="rm-player" style="top: 45%; left: 30%;"&gt;
+  Personalizado
+&lt;/span&gt;</pre>
+          </div>
+        </div>
+        <div class="docs-callout docs-callout--tip">
+          <span class="docs-callout__icon">💡</span>
+          <div>La clase <code>.rm-player</code> usa <code>position: absolute</code> y <code>transform: translate(-50%, -50%)</code> así que las coordenadas <code>top/left</code> apuntan al <strong>centro</strong> del elemento.</div>
+        </div>
+      </div>
+
+      <div class="docs-section" id="practica">
+        <div class="docs-section__title">🏋️ Práctica — Modo Fútbol</div>
+        <div class="docs-practice">
+          <div class="docs-practice__header">
+            <div class="docs-practice__icon">⚽</div>
+            <div><div class="docs-practice__title">Ejercicio — Tu formación ideal</div><div class="docs-practice__sub">Nivel: Principiante · 8 min</div></div>
+          </div>
+          <ol>
+            <li>Crea un <code>.rm-field</code></li>
+            <li>Coloca 11 jugadores con sus nombres y dorsales reales o inventados</li>
+            <li>Usa la formación <strong>4-4-2</strong>: 1 portero, 4 defensas, 4 medios, 2 delanteros</li>
+            <li>Para la segunda línea defensiva y la segunda delantera, usa <code>class="rm-player"</code> para ajustar posiciones</li>
+          </ol>
+          <div class="docs-practice__editor">
+            <div class="docs-practice__editor-bar"><span class="docs-practice__editor-label">✏️ Tu código</span></div>
+            <textarea placeholder="&lt;div class=&quot;rm-field&quot;&gt;
+  &lt;span class=&quot;rm-player portero&quot;&gt;Portero 1&lt;/span&gt;
+  &lt;!-- 4 defensas --&gt;
+  &lt;!-- 4 medios --&gt;
+  &lt;!-- 2 delanteros --&gt;
+&lt;/div&gt;" ></textarea>
+          </div>
+          <div class="docs-practice__result-mt">
+            <div class="docs-practice__result-label">🖥️ Resultado</div>
+            <div class="docs-practice__result"><div class="docs-practice__result-content" class="docs-result-empty">El resultado aparecerá aquí...</div></div>
+          </div>
+        </div>
+
+        <div class="docs-practice">
+          <div class="docs-practice__header">
+            <div class="docs-practice__icon">🏆</div>
+            <div><div class="docs-practice__title">Desafío — Partido completo</div><div class="docs-practice__sub">Nivel: Avanzado · 20 min</div></div>
+          </div>
+          <ol>
+            <li>Crea una página completa con: navbar, título del partido con badges, y dos canchas enfrentadas (equipo local y visitante)</li>
+            <li>Debajo de cada cancha, una tabla con los jugadores del equipo</li>
+            <li>Al final, una sección de alertas con el resultado, goleadores e incidencias</li>
+          </ol>
+          <div class="docs-callout docs-callout--warn" class="rm-mt-3">
+            <span class="docs-callout__icon">🏆</span>
+            <div>Este es el desafío final del framework. Si lo completas, ¡ya eres un Madrid CSS developer! Guarda el archivo como <code>partido.html</code> en tu proyecto.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<label for="sidebar-css-toggle" class="docs-toggle">☰</label>
+</body>
+</html>

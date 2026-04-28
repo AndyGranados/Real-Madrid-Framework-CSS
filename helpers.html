@@ -1,52 +1,256 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Helpers — Madrid CSS</title>
-
-<link rel="stylesheet" href="scss/main.css">
-<link rel="stylesheet" href="scss/docs.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helpers — Madrid CSS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="scss/main.css"><link rel="stylesheet" href="scss/docs.css">
 </head>
-
 <body data-page="helpers">
 
+<input type="checkbox" id="sidebar-css-toggle" class="docs-sidebar-toggle">
 <div class="docs-layout">
-
-<nav class="docs-sidebar">
-  <h2>Madrid CSS</h2>
-
-  <ul>
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="helpers.html">Helpers</a></li>
-  </ul>
-</nav>
-
-<main class="docs-main">
-
-<header class="docs-page-header">
-  <h1>Helpers</h1>
-  <p>Utilidades rápidas para spacing, tipografía y display.</p>
-</header>
-
-<div class="docs-content">
-
-<section class="docs-section">
-  <h2>Spacing</h2>
-  <p>Clases margin y padding.</p>
-</section>
-
-<section class="docs-section">
-  <h2>Display</h2>
-</section>
-
-<section class="docs-section">
-  <h2>Tipografía</h2>
-</section>
-
+  <nav class="docs-sidebar" id="docs-sidebar"><div class="docs-sidebar__logo">
+  <div class="docs-sidebar__logo-icon">RM</div>
+  <div class="docs-sidebar__logo-text">
+    Madrid CSS
+    <span>Framework Docs</span>
+  </div>
 </div>
-</main>
+<div class="docs-sidebar__section">Inicio</div>
+<ul class="docs-sidebar__nav">
+  <li><a href="index.html" class="nav-link "><span class="nav-icon">🏠</span> Introducción</a></li>
+</ul>
+<div class="docs-sidebar__section">Componentes</div>
+<ul class="docs-sidebar__nav">
+  <li><a href="buttons.html" class="nav-link "><span class="nav-icon">🔘</span> Botones</a></li>
+  <li><a href="cards.html" class="nav-link "><span class="nav-icon">🃏</span> Cards</a></li>
+  <li><a href="navbar.html" class="nav-link "><span class="nav-icon">🔝</span> Navbar</a></li>
+  <li><a href="alerts.html" class="nav-link "><span class="nav-icon">🔔</span> Alertas</a></li>
+  <li><a href="badges.html" class="nav-link "><span class="nav-icon">🏷️</span> Badges</a></li>
+  <li><a href="forms.html" class="nav-link "><span class="nav-icon">📝</span> Formularios</a></li>
+  <li><a href="tables.html" class="nav-link "><span class="nav-icon">📊</span> Tablas</a></li>
+</ul>
+<div class="docs-sidebar__section">Layout</div>
+<ul class="docs-sidebar__nav">
+  <li><a href="grid.html" class="nav-link "><span class="nav-icon">⚙️</span> Grid System</a></li>
+</ul>
+<div class="docs-sidebar__section">Utilidades</div>
+<ul class="docs-sidebar__nav">
+  <li><a href="helpers.html" class="nav-link active"><span class="nav-icon">🛠️</span> Helpers</a></li>
+  <li><a href="football.html" class="nav-link "><span class="nav-icon">⚽</span> Modo Fútbol</a></li>
+</ul></nav>
+  <main class="docs-main">
+    <header class="docs-page-header" data-icon="🛠️">
+      <div class="docs-page-header__badge">Utilidades</div>
+      <h1>Helpers</h1>
+      <p>Clases de utilidad para spacing, display, tipografía, sombras y más. Sin escribir CSS adicional.</p>
+    </header>
+    <div class="docs-content">
+
+      <div class="docs-section" id="spacing">
+        <div class="docs-section__title">Espaciado (Margin & Padding)</div>
+        <p class="docs-section__desc">Escala del 1 al 5. Los prefijos son: <code>m-</code>, <code>mt-</code>, <code>mb-</code>, <code>ml-</code>, <code>mr-</code> para margin y <code>p-</code>, <code>pt-</code>, <code>pb-</code>, <code>pl-</code>, <code>pr-</code> para padding.</p>
+        <table class="docs-props">
+          <thead><tr><th>Escala</th><th>Valor rem</th><th>Valor px aprox</th></tr></thead>
+          <tbody>
+            <tr><td><code>-1</code></td><td>0.25rem</td><td>4px</td></tr>
+            <tr><td><code>-2</code></td><td>0.5rem</td><td>8px</td></tr>
+            <tr><td><code>-3</code></td><td>1rem</td><td>16px</td></tr>
+            <tr><td><code>-4</code></td><td>1.5rem</td><td>24px</td></tr>
+            <tr><td><code>-5</code></td><td>3rem</td><td>48px</td></tr>
+          </tbody>
+        </table>
+        <div class="docs-demo">
+          <div class="docs-demo__label">👁️ <span>Ejemplo</span> — spacing visual</div>
+          <div class="docs-demo__preview">
+            <div class="docs-helper-box docs-helper-box--p1">mb-1 (4px)</div>
+            <div class="docs-helper-box docs-helper-box--p2">mb-2 (8px)</div>
+            <div class="docs-helper-box docs-helper-box--p3">mb-3 (16px)</div>
+            <div class="docs-helper-box docs-helper-box--p4">mb-4 (24px)</div>
+          </div>
+          <div class="docs-code">
+            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
+            <pre>&lt;div class="rm-mb-3"&gt;Margin bottom 1rem&lt;/div&gt;
+&lt;div class="rm-mt-4 rm-mb-2"&gt;Margin top 1.5rem, bottom 0.5rem&lt;/div&gt;
+&lt;div class="rm-p-3"&gt;Padding uniforme 1rem&lt;/div&gt;
+&lt;div class="rm-pt-2 pb-4 pl-3"&gt;Padding individual&lt;/div&gt;</pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="docs-section" id="display">
+        <div class="docs-section__title">Display y Flexbox</div>
+        <div class="docs-demo">
+          <div class="docs-demo__label">👁️ <span>Vista previa</span></div>
+          <div class="docs-demo__preview--block" >
+            <div class="rm-flex rm-jc-centro rm-ai-centro" class="docs-flex-demo-box">
+              <span class="rm-color-azul rm-negrita">d-flex + rm-jc-centro + align-center</span>
+            </div>
+          </div>
+          <div class="docs-code">
+            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
+            <pre>&lt;div class="rm-flex rm-jc-centro rm-ai-centro"&gt;
+  Centrado con flexbox
+&lt;/div&gt;
+
+&lt;div class="rm-oculto"&gt;Oculto&lt;/div&gt;
+&lt;div class="rm-bloque"&gt;Block&lt;/div&gt;</pre>
+          </div>
+        </div>
+        <table class="docs-props">
+          <thead><tr><th>Clase</th><th>CSS generado</th></tr></thead>
+          <tbody>
+            <tr><td><code>.d-none</code></td><td>display: none</td></tr>
+            <tr><td><code>.d-block</code></td><td>display: block</td></tr>
+            <tr><td><code>.d-flex</code></td><td>display: flex</td></tr>
+            <tr><td><code>.justify-center</code></td><td>justify-content: center</td></tr>
+            <tr><td><code>.align-center</code></td><td>align-items: center</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="docs-section" id="tipografia">
+        <div class="docs-section__title">Tipografía</div>
+        <div class="docs-demo">
+          <div class="docs-demo__label">👁️ <span>Vista previa</span></div>
+          <div class="docs-demo__preview--block" >
+            <p class="rm-fs-1 rm-negrita rm-texto-centro" class="rm-mb-2">fs-1 + rm-negrita + text-center</p>
+            <p class="rm-fs-2" class="rm-mb-2">fs-2 — tamaño 1.5rem</p>
+            <p class="rm-fs-3 rm-fina">fs-3 + rm-fina — 1.25rem ligero</p>
+          </div>
+          <div class="docs-code">
+            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
+            <pre>&lt;p class="rm-fs-1 rm-negrita rm-texto-centro"&gt;Título grande centrado&lt;/p&gt;
+&lt;p class="rm-fs-2"&gt;Subtítulo 1.5rem&lt;/p&gt;
+&lt;p class="rm-fs-3 rm-fina"&gt;Texto ligero 1.25rem&lt;/p&gt;
+&lt;p class="rm-texto-der rm-negrita"&gt;Derecha y bold&lt;/p&gt;</pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="docs-section" id="sombras">
+        <div class="docs-section__title">Sombras</div>
+        <div class="docs-demo">
+          <div class="docs-demo__label">👁️ <span>Vista previa</span></div>
+          <div class="docs-demo__preview">
+            <div class="rm-sombra-sm rm-redondeado" class="docs-practice__result">shadow-sm</div>
+            <div class="rm-sombra-lg rm-redondeado" class="docs-practice__result">shadow-lg</div>
+          </div>
+          <div class="docs-code">
+            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
+            <pre>&lt;div class="rm-sombra-sm rm-redondeado"&gt;Sombra pequeña&lt;/div&gt;
+&lt;div class="rm-sombra-lg rm-redondeado"&gt;Sombra grande azulada&lt;/div&gt;</pre>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="docs-section" id="text-colors">
+        <div class="docs-section__title">Colores de texto</div>
+        <div class="docs-demo">
+          <div class="docs-demo__label">👁️ <span>Vista previa</span></div>
+          <div class="docs-demo__preview--block" >
+            <p class="rm-color-azul rm-negrita">text-primary — Azul Madrid #00529F</p>
+            <p class="rm-color-dorado rm-negrita">text-accent — Dorado Madrid #FEBE10</p>
+            <p class="rm-color-exito rm-negrita">text-success — Verde #28a745</p>
+            <p class="rm-color-error rm-negrita">text-danger — Rojo #dc3545</p>
+            <p class="rm-color-aviso rm-negrita">text-warning — Amarillo #ffc107</p>
+            <p class="rm-color-info rm-negrita">text-info — Celeste #17a2b8</p>
+            <p class="rm-color-gris">text-muted — Gris #888888</p>
+          </div>
+          <div class="docs-code">
+            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
+            <pre>&lt;p class="rm-color-azul"&gt;Azul Madrid&lt;/p&gt;
+&lt;p class="rm-color-dorado"&gt;Dorado Madrid&lt;/p&gt;
+&lt;p class="rm-color-exito"&gt;Éxito&lt;/p&gt;
+&lt;p class="rm-color-error"&gt;Peligro&lt;/p&gt;
+&lt;p class="rm-color-aviso"&gt;Advertencia&lt;/p&gt;
+&lt;p class="rm-color-info"&gt;Información&lt;/p&gt;
+&lt;p class="rm-color-gris"&gt;Texto atenuado&lt;/p&gt;</pre>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="docs-section" id="bg-colors">
+        <div class="docs-section__title">Colores de fondo</div>
+        <div class="docs-demo">
+          <div class="docs-demo__label">👁️ <span>Vista previa</span></div>
+          <div class="docs-demo__preview--block" class="docs-helper-flex-col">
+            <div class="rm-fondo-azul rm-redondeado rm-p-2 rm-texto-centro rm-negrita">.bg-primary</div>
+            <div class="rm-fondo-dorado rm-redondeado rm-p-2 rm-texto-centro rm-negrita">.bg-accent</div>
+            <div class="rm-fondo-exito rm-redondeado rm-p-2 rm-texto-centro rm-negrita">.bg-success</div>
+            <div class="rm-fondo-error rm-redondeado rm-p-2 rm-texto-centro rm-negrita">.bg-danger</div>
+            <div class="rm-fondo-aviso rm-redondeado rm-p-2 rm-texto-centro rm-negrita">.bg-warning</div>
+            <div class="rm-fondo-info rm-redondeado rm-p-2 rm-texto-centro rm-negrita">.bg-info</div>
+            <div class="rm-fondo-claro rm-redondeado rm-p-2 rm-texto-centro rm-negrita" class="docs-helper-border">.bg-light</div>
+            <div class="rm-fondo-oscuro rm-redondeado rm-p-2 rm-texto-centro rm-negrita">.bg-dark</div>
+          </div>
+          <div class="docs-code">
+            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
+            <pre>&lt;div class="rm-fondo-azul rm-redondeado rm-p-2"&gt;Fondo azul&lt;/div&gt;
+&lt;div class="rm-fondo-dorado rm-redondeado rm-p-2"&gt;Fondo dorado&lt;/div&gt;
+&lt;div class="rm-fondo-exito rm-redondeado rm-p-2"&gt;Fondo éxito&lt;/div&gt;
+&lt;div class="rm-fondo-error rm-redondeado rm-p-2"&gt;Fondo peligro&lt;/div&gt;
+&lt;div class="rm-fondo-aviso rm-redondeado rm-p-2"&gt;Fondo advertencia&lt;/div&gt;
+&lt;div class="rm-fondo-claro rm-redondeado rm-p-2"&gt;Fondo claro&lt;/div&gt;
+&lt;div class="rm-fondo-oscuro rm-redondeado rm-p-2"&gt;Fondo oscuro&lt;/div&gt;</pre>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="docs-section" id="flexbox">
+        <div class="docs-section__title">Flexbox utilities</div>
+        <table class="docs-props">
+          <thead><tr><th>Clase</th><th>Propiedad CSS</th></tr></thead>
+          <tbody>
+            <tr><td><code>.d-flex</code></td><td>display: flex</td></tr>
+            <tr><td><code>.flex-column</code></td><td>flex-direction: column</td></tr>
+            <tr><td><code>.flex-wrap</code></td><td>flex-wrap: wrap</td></tr>
+            <tr><td><code>.justify-content-start</code></td><td>justify-content: flex-start</td></tr>
+            <tr><td><code>.justify-content-center</code></td><td>justify-content: center</td></tr>
+            <tr><td><code>.justify-content-end</code></td><td>justify-content: flex-end</td></tr>
+            <tr><td><code>.justify-content-between</code></td><td>justify-content: space-between</td></tr>
+            <tr><td><code>.justify-content-around</code></td><td>justify-content: space-around</td></tr>
+            <tr><td><code>.align-items-start</code></td><td>align-items: flex-start</td></tr>
+            <tr><td><code>.align-items-center</code></td><td>align-items: center</td></tr>
+            <tr><td><code>.align-items-end</code></td><td>align-items: flex-end</td></tr>
+            <tr><td><code>.gap-1 … .gap-4</code></td><td>gap: 0.25rem … 1.5rem</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="docs-section" id="practica">
+        <div class="docs-section__title">🏋️ Práctica — Helpers</div>
+        <div class="docs-practice">
+          <div class="docs-practice__header">
+            <div class="docs-practice__icon">⚡</div>
+            <div><div class="docs-practice__title">Ejercicio — Solo con utilidades</div><div class="docs-practice__sub">Nivel: Principiante · 5 min</div></div>
+          </div>
+          <ol>
+            <li>Crea un <code>div</code> con <code>d-flex</code>, <code>justify-center</code> y <code>align-center</code> de 100px de alto (inline style)</li>
+            <li>Dentro coloca un texto con <code>fs-1 fw-bold</code> que diga "RM"</li>
+            <li>Al contenedor aplica <code>shadow-lg</code> y <code>rounded</code> y <code>p-4</code></li>
+          </ol>
+          <div class="docs-practice__editor">
+            <div class="docs-practice__editor-bar"><span class="docs-practice__editor-label">✏️ Tu código</span></div>
+            <textarea placeholder="&lt;div class=&quot;d-flex ... rm-sombra-lg rm-redondeado p-4&quot; style=&quot;height:100px;&quot;&gt;
+  &lt;span class=&quot;fs-1 fw-bold&quot;&gt;RM&lt;/span&gt;
+&lt;/div&gt;"></textarea>
+          </div>
+          <div class="docs-practice__result-mt">
+            <div class="docs-practice__result-label">🖥️ Resultado</div>
+            <div class="docs-practice__result"><div class="docs-practice__result-content" class="docs-result-empty">El resultado aparecerá aquí...</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
 </div>
 
+<label for="sidebar-css-toggle" class="docs-toggle">☰</label>
 </body>
 </html>

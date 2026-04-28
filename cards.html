@@ -4,114 +4,290 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cards — Madrid CSS</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="scss/main.css">
   <link rel="stylesheet" href="scss/docs.css">
 </head>
 <body data-page="cards">
 
 <input type="checkbox" id="sidebar-css-toggle" class="docs-sidebar-toggle">
-
 <div class="docs-layout">
-
-<nav class="docs-sidebar">
-  <div class="docs-sidebar__logo">
-    <div class="docs-sidebar__logo-icon">RM</div>
-    <div class="docs-sidebar__logo-text">
-      Madrid CSS
-      <span>Framework Docs</span>
-    </div>
-  </div>
-</nav>
-
-<main class="docs-main">
-
-<header class="docs-page-header">
-  <div class="docs-page-header__badge">Componente</div>
-  <h1>Cards</h1>
-  <p>Contenedores reutilizables para mostrar contenido.</p>
-</header>
-
-<div class="docs-content">
-
-  <div class="docs-section">
-  <div class="docs-section__title">Card con imagen</div>
-
-  <div class="card">
-    <img class="card__image"
-    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Real_Madrid_CF.svg/200px-Real_Madrid_CF.svg.png">
-
-    <div class="card__body">
-      <div class="card__title">Real Madrid</div>
-      <p class="card__text">
-        El club más grande del mundo.
-      </p>
-    </div>
+  <nav class="docs-sidebar" id="docs-sidebar"><div class="docs-sidebar__logo">
+  <div class="docs-sidebar__logo-icon">RM</div>
+  <div class="docs-sidebar__logo-text">
+    Madrid CSS
+    <span>Framework Docs</span>
   </div>
 </div>
+<div class="docs-sidebar__section">Inicio</div>
+<ul class="docs-sidebar__nav">
+  <li><a href="index.html" class="nav-link "><span class="nav-icon">🏠</span> Introducción</a></li>
+</ul>
+<div class="docs-sidebar__section">Componentes</div>
+<ul class="docs-sidebar__nav">
+  <li><a href="buttons.html" class="nav-link "><span class="nav-icon">🔘</span> Botones</a></li>
+  <li><a href="cards.html" class="nav-link active"><span class="nav-icon">🃏</span> Cards</a></li>
+  <li><a href="navbar.html" class="nav-link "><span class="nav-icon">🔝</span> Navbar</a></li>
+  <li><a href="alerts.html" class="nav-link "><span class="nav-icon">🔔</span> Alertas</a></li>
+  <li><a href="badges.html" class="nav-link "><span class="nav-icon">🏷️</span> Badges</a></li>
+  <li><a href="forms.html" class="nav-link "><span class="nav-icon">📝</span> Formularios</a></li>
+  <li><a href="tables.html" class="nav-link "><span class="nav-icon">📊</span> Tablas</a></li>
+</ul>
+<div class="docs-sidebar__section">Layout</div>
+<ul class="docs-sidebar__nav">
+  <li><a href="grid.html" class="nav-link "><span class="nav-icon">⚙️</span> Grid System</a></li>
+</ul>
+<div class="docs-sidebar__section">Utilidades</div>
+<ul class="docs-sidebar__nav">
+  <li><a href="helpers.html" class="nav-link "><span class="nav-icon">🛠️</span> Helpers</a></li>
+  <li><a href="football.html" class="nav-link "><span class="nav-icon">⚽</span> Modo Fútbol</a></li>
+</ul></nav>
+  <main class="docs-main">
+    <header class="docs-page-header" data-icon="🃏">
+      <div class="docs-page-header__badge">Componente</div>
+      <h1>Cards</h1>
+      <p>Contenedores versátiles con hover animado, borde dorado y sombra. Perfectos para listas de contenido, jugadores, productos.</p>
+    </header>
 
-<div class="docs-section">
-  <div class="docs-section__title">Card simple</div>
+    <div class="docs-content">
 
-  <div class="card rm-p-3">
-    <div class="card__title">Champions</div>
-    <p class="card__text">14 títulos europeos.</p>
-  </div>
-</div>
+      <nav class="docs-toc" class="rm-mb-4">
+        <div class="docs-toc__title">En esta página</div>
+        <a href="#estructura">Estructura BEM</a>
+        <a href="#con-imagen">Card con imagen</a>
+        <a href="#simple">Card simple</a>
+        <a href="#grid-cards">Grid de cards</a>
+        <a href="#practica">🏋️ Práctica</a>
+      </nav>
 
-<div class="docs-section">
-  <div class="docs-section__title">Grid Cards</div>
-
-  <div class="rm-fila">
-
-    <div class="col-4">
-      <div class="card rm-p-3">
-        <div class="card__title">Portero</div>
+      
+      <div class="docs-section" id="header-footer">
+        <div class="docs-section__title">Card con Header y Footer</div>
+        <div class="docs-demo">
+          <div class="docs-demo__label">👁️ <span>Vista previa</span></div>
+          <div class="docs-demo__preview--block" class="docs-demo__preview--bg">
+            <div class="card" class="rm-card-demo">
+              <div class="card__header">⚽ Estadísticas del partido</div>
+              <div class="card__body">
+                <div class="card__title">Real Madrid 3 – 1 Barcelona</div>
+                <p class="card__text">Goles de Vinícius (2) y Bellingham. El Madrid domina el Clásico con autoridad.</p>
+                <a href="#" class="rm-btn rm-btn-azul rm-btn-sm">Ver detalles</a>
+              </div>
+              <div class="card__footer">
+                <span>🗓️ 26 Oct 2024</span>
+                <span class="badge badge--accent badge--pill">LaLiga</span>
+              </div>
+            </div>
+          </div>
+          <div class="docs-code">
+            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
+            <pre>&lt;div class="card"&gt;
+  &lt;div class="card__header"&gt;Título de sección&lt;/div&gt;
+  &lt;div class="card__body"&gt;
+    &lt;div class="card__title"&gt;Título&lt;/div&gt;
+    &lt;p class="card__text"&gt;Contenido...&lt;/p&gt;
+    &lt;a href="#" class="rm-btn rm-btn-azul rm-btn-sm"&gt;Acción&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="card__footer"&gt;
+    &lt;span&gt;Metadato&lt;/span&gt;
+    &lt;span class="badge badge--accent badge--pill"&gt;Tag&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="col-4">
-      <div class="card rm-p-3">
-        <div class="card__title">Defensa</div>
+      <div class="docs-section" id="estructura">
+        <div class="docs-section__title">Estructura BEM</div>
+        <p class="docs-section__desc">Las cards usan nomenclatura BEM. Los elementos internos se separan con doble guión bajo <code>__</code>.</p>
+        <table class="docs-props">
+          <thead><tr><th>Clase</th><th>Elemento HTML</th><th>Descripción</th></tr></thead>
+          <tbody>
+            <tr><td><code>.card</code></td><td>div</td><td>Contenedor principal — sombra, radio, hover animado</td></tr>
+            <tr><td><code>.card__image</code></td><td>img</td><td>Imagen superior — 200px de alto, object-fit cover</td></tr>
+            <tr><td><code>.card__body</code></td><td>div</td><td>Área de contenido con padding 1.5rem</td></tr>
+            <tr><td><code>.card__title</code></td><td>div / h3</td><td>Título azul, 1.3rem, bold</td></tr>
+            <tr><td><code>.card__text</code></td><td>p</td><td>Texto descriptivo gris, line-height 1.6</td></tr>
+          </tbody>
+        </table>
+        <div class="docs-callout docs-callout--info">
+          <span class="docs-callout__icon">ℹ️</span>
+          <div>Al hacer hover sobre una card, se eleva 6px, escala 1% y aparece un borde dorado automáticamente. No necesitas agregar nada extra.</div>
+        </div>
       </div>
-    </div>
 
-    <div class="col-4">
-      <div class="card rm-p-3">
-        <div class="card__title">Delantero</div>
+      
+      <div class="docs-section" id="con-imagen">
+        <div class="docs-section__title">Card con imagen</div>
+        <p class="docs-section__desc">La card completa incluye imagen, cuerpo, título, texto y botón de acción.</p>
+        <div class="docs-demo">
+          <div class="docs-demo__label">👁️ <span>Vista previa</span></div>
+          <div class="docs-demo__preview docs-demo__preview--bg">
+            <div class="card" class="rm-card-demo">
+              <img class="card__image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Real_Madrid_CF.svg/200px-Real_Madrid_CF.svg.png" alt="Real Madrid" class="docs-card-img--azul">
+              <div class="card__body">
+                <div class="card__title">Real Madrid C.F.</div>
+                <p class="card__text">El club más laureado de la historia del fútbol, con más de 14 Champions League.</p>
+                <a href="#" class="rm-btn rm-btn-azul rm-btn-md">Ver más</a>
+              </div>
+            </div>
+          </div>
+          <div class="docs-code">
+            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
+            <pre>&lt;div class="card"&gt;
+  &lt;img class="card__image" src="imagen.jpg" alt="Descripción"&gt;
+  &lt;div class="card__body"&gt;
+    &lt;div class="card__title"&gt;Título de la card&lt;/div&gt;
+    &lt;p class="card__text"&gt;
+      Texto descriptivo del contenido de la card.
+    &lt;/p&gt;
+    &lt;a href="#" class="rm-btn rm-btn-azul rm-btn-md"&gt;Ver más&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+          </div>
+        </div>
       </div>
-    </div>
 
-  </div>
+      
+      <div class="docs-section" id="simple">
+        <div class="docs-section__title">Card simple (sin imagen)</div>
+        <p class="docs-section__desc">Puedes omitir la imagen y usar solo el body. Combínala con clases de utilidad de spacing.</p>
+        <div class="docs-demo">
+          <div class="docs-demo__label">👁️ <span>Vista previa</span></div>
+          <div class="docs-demo__preview" class="docs-demo__preview--bg rm-fila rm-flex-envolver rm-gap-3">
+            <div class="card rm-p-3" class="rm-card-demo--xs">
+              <div class="rm-feature__icono">🏆</div>
+              <div class="card__title" class="rm-mb-1">Champions</div>
+              <p class="rm-color-gris rm-feature__desc">14 títulos de la Champions League</p>
+            </div>
+            <div class="card rm-p-3" class="rm-card-demo--xs">
+              <div class="rm-feature__icono">⭐</div>
+              <div class="card__title" class="rm-mb-1">La Liga</div>
+              <p class="rm-color-gris rm-feature__desc">35 títulos de liga en España</p>
+            </div>
+          </div>
+          <div class="docs-code">
+            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
+            <pre>&lt;!-- Card sin imagen, con padding de utilidad --&gt;
+&lt;div class="card rm-p-3"&gt;
+  &lt;div style="font-size:2rem;"&gt;🏆&lt;/div&gt;
+  &lt;div class="card__title"&gt;Champions&lt;/div&gt;
+  &lt;p style="color:#888;"&gt;14 títulos de Champions&lt;/p&gt;
+&lt;/div&gt;</pre>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="docs-section" id="grid-cards">
+        <div class="docs-section__title">Grid de cards</div>
+        <p class="docs-section__desc">Combina las cards con el sistema de grid para crear layouts responsivos.</p>
+        <div class="docs-demo">
+          <div class="docs-demo__label">👁️ <span>Vista previa</span> — 3 columnas en desktop</div>
+          <div class="docs-demo__preview--block" class="docs-demo__preview--bg">
+            <div class="rm-fila" class="docs-cards-grid">
+              <div class="col-12 col-md-4" class="docs-cards-grid__col">
+                <div class="card"><div class="card__body"><div class="card__title">Portero</div><p class="card__text">El guardián de la portería del equipo blanco.</p><span class="badge badge--secondary">GK</span></div></div>
+              </div>
+              <div class="col-12 col-md-4" class="docs-cards-grid__col">
+                <div class="card"><div class="card__body"><div class="card__title">Defensa</div><p class="card__text">La línea defensiva que protege la portería.</p><span class="badge badge--secondary">DEF</span></div></div>
+              </div>
+              <div class="col-12 col-md-4" class="docs-cards-grid__col">
+                <div class="card"><div class="card__body"><div class="card__title">Delantero</div><p class="card__text">El goleador que desequilibra al rival.</p><span class="badge badge--accent">FWD</span></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="docs-code">
+            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
+            <pre>&lt;div class="rm-fila"&gt;
+  &lt;div class="col-12 col-md-4"&gt;
+    &lt;div class="card"&gt;
+      &lt;div class="card__body"&gt;
+        &lt;div class="card__title"&gt;Portero&lt;/div&gt;
+        &lt;p class="card__text"&gt;El guardián del arco.&lt;/p&gt;
+        &lt;span class="badge badge--secondary"&gt;GK&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- Repetir para col-md-4 restantes --&gt;
+&lt;/div&gt;</pre>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="docs-section" id="practica">
+        <div class="docs-section__title">🏋️ Práctica — Cards</div>
+
+        <div class="docs-practice">
+          <div class="docs-practice__header">
+            <div class="docs-practice__icon">⚡</div>
+            <div>
+              <div class="docs-practice__title">Ejercicio 1 — Ficha de jugador</div>
+              <div class="docs-practice__sub">Nivel: Principiante · 3 min</div>
+            </div>
+          </div>
+          <ol>
+            <li>Crea una card con <code>.card__body</code></li>
+            <li>Agrega un <code>.card__title</code> con el nombre de un jugador</li>
+            <li>Agrega un <code>.card__text</code> con la posición</li>
+            <li>Agrega un botón <code>btn-accent btn-sm</code> con el texto "Ver estadísticas"</li>
+          </ol>
+          <div class="docs-practice__editor">
+            <div class="docs-practice__editor-bar">
+              <span class="docs-practice__editor-label">✏️ Tu código</span>
+              
+            </div>
+            <textarea placeholder="&lt;div class=&quot;card&quot;&gt;
+  &lt;div class=&quot;card__body&quot;&gt;
+    &lt;!-- Completa aquí --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;"></textarea>
+          </div>
+          <div class="docs-practice__result-mt">
+            <div class="docs-practice__result-label">🖥️ Resultado</div>
+            <div class="docs-practice__result"><div class="docs-practice__result-content" class="docs-result-empty">El resultado aparecerá aquí...</div></div>
+          </div>
+        </div>
+
+        <div class="docs-practice">
+          <div class="docs-practice__header">
+            <div class="docs-practice__icon">🧠</div>
+            <div>
+              <div class="docs-practice__title">Ejercicio 2 — Plantilla del equipo</div>
+              <div class="docs-practice__sub">Nivel: Intermedio · 10 min</div>
+            </div>
+          </div>
+          <ol>
+            <li>Crea un <code>.row</code> con 4 cards de jugadores, cada una en <code>.col-12 .col-md-3</code></li>
+            <li>Cada card debe tener: nombre (title), posición (text), dorsal (badge)</li>
+            <li>Usa <code>.badge--secondary</code> para defensas y <code>.badge--accent</code> para delanteros</li>
+            <li>Agrega un botón <code>btn-outline btn-sm</code> en cada card</li>
+          </ol>
+          <div class="docs-practice__editor">
+            <div class="docs-practice__editor-bar">
+              <span class="docs-practice__editor-label">✏️ Tu código</span>
+              
+            </div>
+            <textarea placeholder="&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-12 col-md-3&quot;&gt;
+    &lt;!-- Card jugador 1 --&gt;
+  &lt;/div&gt;
+  ...
+&lt;/div&gt;" ></textarea>
+          </div>
+          <div class="docs-practice__result-mt">
+            <div class="docs-practice__result-label">🖥️ Resultado</div>
+            <div class="docs-practice__result"><div class="docs-practice__result-content" class="docs-result-empty">El resultado aparecerá aquí...</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
 </div>
 
-<div class="docs-section">
-  <div class="docs-section__title">Estructura BEM</div>
-
-  <table class="docs-props">
-    <thead>
-      <tr>
-        <th>Clase</th>
-        <th>Uso</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td>.card</td>
-        <td>Contenedor principal</td>
-      </tr>
-
-      <tr>
-        <td>.card__body</td>
-        <td>Cuerpo interno</td>
-      </tr>
-
-      <tr>
-        <td>.card__title</td>
-        <td>Título</td>
-      </tr>
-    </tbody>
-  </table>
-
-</div>
+<label for="sidebar-css-toggle" class="docs-toggle">☰</label>
+</body>
+</html>
