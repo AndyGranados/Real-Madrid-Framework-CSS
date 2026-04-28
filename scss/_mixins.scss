@@ -1,3 +1,15 @@
 @use 'sass:map';
 @use 'sass:math';
 @use 'variables' as v;
+
+// ── Función: elimina la unidad de un valor numérico ───────────────
+// Uso: strip-unit(16px) → 16
+@function strip-unit($number) {
+  @return math.div($number, ($number * 0 + 1));
+}
+
+// ── Función: convierte px a rem ───────────────────────────────────
+// Uso: rem(24px) → 1.5rem
+@function rem($px, $base: 16px) {
+  @return math.div(strip-unit($px), strip-unit($base)) * 1rem;
+}
