@@ -790,9 +790,11 @@ Botón:       .rm-btn .rm-btn-azul .rm-btn-md
 
 ---
 
-## Licencia
+## Licencia / Uso Académico
 
-Este proyecto es de uso educativo y personal. Inspirado en la identidad visual del Real Madrid C.F. Todos los derechos de los colores institucionales y marcas pertenecen a sus respectivos propietarios.
+Real Madrid Framework CSS es un proyecto desarrollado con fines exclusivamente educativos como parte de la asignatura **Herramientas de Productividad**, perteneciente a la carrera de **Ingeniería de Sistemas y Redes Informáticos** de la **Universidad de El Salvador**.Este framework fue creado con propósito académico para poner en práctica conocimientos relacionados con maquetación web, preprocesadores CSS, metodologías de organización de código y trabajo colaborativo mediante herramientas de desarrollo. 
+La propuesta visual toma inspiración en la identidad gráfica asociada al **Real Madrid C.F.** (colores representativos y estilo temático). Sin embargo, este proyecto **no posee relación oficial, patrocinio ni afiliación** con dicha institución deportiva. 
+Todos los nombres, escudos, marcas, colores institucionales y demás elementos asociados al Real Madrid C.F. pertenecen a sus respectivos propietarios y se mencionan únicamente como referencia estética dentro de un contexto educativo.Queda prohibido el uso comercial de este proyecto sin la autorización correspondiente de los titulares de marcas involucradas.
 
 ---
 
