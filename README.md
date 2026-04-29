@@ -32,7 +32,7 @@
 
 ## Descripción general
 
-**Madrid CSS v3** es un framework CSS desarrollado desde cero con **Sass (SCSS)**, siguiendo una arquitectura modular y escalable. Está pensado para construir interfaces web limpias y responsivas que reflejan la identidad visual del Real Madrid: paleta cromática oficial, efectos de brillo dorado (*madrid-glow*), tipografía moderna y componentes reutilizables.
+**REAL MADRID FRAMEWORK CSS** es un framework CSS desarrollado desde cero con **Sass (SCSS)**, siguiendo una arquitectura modular y escalable. Está pensado para construir interfaces web limpias y responsivas que reflejan la identidad visual del Real Madrid: paleta cromática oficial, efectos de brillo dorado (*madrid-glow*), tipografía moderna y componentes reutilizables.
 
 El framework incluye una documentación interactiva completa compuesta por páginas HTML independientes para cada componente, facilitando tanto el aprendizaje como la referencia rápida durante el desarrollo.
 
@@ -53,7 +53,7 @@ El framework incluye una documentación interactiva completa compuesta por pági
 ## Estructura del proyecto
 
 ```
-madrid-v3/
+REAL-MADRID-FRAMEWORK-CSS/
 ├── index.html          # Página de introducción / documentación principal
 ├── buttons.html        # Documentación de botones
 ├── cards.html          # Documentación de tarjetas
@@ -763,7 +763,7 @@ El proyecto incluye 10 páginas HTML de documentación completamente funcionales
 
 ## Convención de nomenclatura
 
-Madrid CSS sigue la metodología **BEM** (Block, Element, Modifier) y utiliza el prefijo `rm-` (por *Real Madrid*) en todos los componentes utilitarios y de layout, evitando colisiones con otros frameworks como Bootstrap o Tailwind.
+REAL MADRID FRAMEWORK CSS sigue la metodología **BEM** (Block, Element, Modifier) y utiliza el prefijo `rm-` (por *Real Madrid*) en todos los componentes utilitarios y de layout, evitando colisiones con otros frameworks como Bootstrap o Tailwind.
 
 ```
 Bloque:      .navbar
@@ -799,5 +799,5 @@ Todos los nombres, escudos, marcas, colores institucionales y demás elementos a
 ---
 
 <div align="center">
-  <strong>Madrid CSS v3</strong> — Hecho con ⚽ y CSS puro
+  <strong>REAL-MADRID-FRAMEWORK-CSS</strong> — Hecho con ⚽ y CSS puro
 </div>
