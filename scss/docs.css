@@ -605,3 +605,25 @@
 .docs-football-badge { border-color: rgba(254,190,16,0.5); color: #FEBE10; }
 
 .docs-flex-gap-sm { display: flex; flex-direction: column; gap: 0.4rem; }
+
+@media (max-width: 768px) {
+  .docs-layout {
+    display: block;
+  }
+
+  .docs-sidebar {
+    width: 260px;
+    transform: translateX(-100%);
+    position: fixed;
+  }
+
+  .docs-main {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}

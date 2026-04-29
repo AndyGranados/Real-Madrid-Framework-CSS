@@ -13,9 +13,14 @@
 @function rem($px, $base: 16px) {
   @return math.div(strip-unit($px), strip-unit($base)) * 1rem;
 }
+
 @mixin respond($breakpoint) {
-  @media (min-width: map.get(v.$breakpoints, $breakpoint)) {
-    @content;
+  @if map.has-key(v.$breakpoints, $breakpoint) {
+    @media (min-width: map.get(v.$breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "El breakpoint '#{$breakpoint}' no existe.";
   }
 }
 
@@ -47,7 +52,14 @@
 
 @mixin container {
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 v.$gutter;
+
+  @include respond(md) {
+    max-width: 720px;
+  }
+
+  @include respond(lg) {
+    max-width: 960px;
+  }
 }
