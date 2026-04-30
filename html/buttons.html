@@ -1,188 +1,351 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Botones — Real Madrid CSS</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/docs.css">
-  <link rel="icon" href="../imagenes/logomadrid.png">
-</head>
-<body data-page="buttons">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Botones — Real Madrid CSS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/docs.css" />
+    <link rel="icon" href="../imagenes/logomadrid.png" />
+  </head>
+  <body data-page="buttons">
+    <input
+      type="checkbox"
+      id="sidebar-css-toggle"
+      class="docs-sidebar-toggle"
+    />
+    <div class="docs-layout">
+      <nav class="docs-sidebar" id="docs-sidebar">
+        <div class="docs-sidebar__logo">
+          <img
+            src="../imagenes/logomadrid.png"
+            alt="RM"
+            style="width: 28px; height: 28px; object-fit: contain"
+          />
 
-<input type="checkbox" id="sidebar-css-toggle" class="docs-sidebar-toggle">
-<div class="docs-layout">
-  <nav class="docs-sidebar" id="docs-sidebar"><div class="docs-sidebar__logo">
- <img src="../imagenes/logomadrid.png" alt="RM" style="width:28px; height:28px; object-fit:contain;">
-
-<span style="width:1px; height:36px; background:rgba(255,255,255,0.3); display:inline-block; margin:0 6px;"></span>
-   <img src="../imagenes/parche.png" alt="RM" style="width:28px; height:28px; object-fit:contain;">
-  <div class="docs-sidebar__logo-text">
-    Real Madrid CSS
-    <span>Framework Docs</span>
-  </div>
-</div>
-<div class="docs-sidebar__section">Inicio</div>
-<ul class="docs-sidebar__nav">
-  <li><a href="../index.html" class="nav-link "><span class="nav-icon">🏠</span> Introducción</a></li>
-</ul>
-<div class="docs-sidebar__section">Componentes</div>
-<ul class="docs-sidebar__nav">
-  <li><a href="buttons.html" class="nav-link active"><span class="nav-icon">🔘</span> Botones</a></li>
-  <li><a href="cards.html" class="nav-link "><span class="nav-icon">🃏</span> Cards</a></li>
-  <li><a href="navbar.html" class="nav-link "><span class="nav-icon">🔝</span> Navbar</a></li>
-  <li><a href="alerts.html" class="nav-link "><span class="nav-icon">🔔</span> Alertas</a></li>
-  <li><a href="badges.html" class="nav-link "><span class="nav-icon">🏷️</span> Badges</a></li>
-  <li><a href="forms.html" class="nav-link "><span class="nav-icon">📝</span> Formularios</a></li>
-  <li><a href="tables.html" class="nav-link "><span class="nav-icon">📊</span> Tablas</a></li>
-</ul>
-<div class="docs-sidebar__section">Layout</div>
-<ul class="docs-sidebar__nav">
-  <li><a href="grid.html" class="nav-link "><span class="nav-icon">⚙️</span> Grid System</a></li>
-</ul>
-<div class="docs-sidebar__section">Utilidades</div>
-<ul class="docs-sidebar__nav">
-  <li><a href="helpers.html" class="nav-link "><span class="nav-icon">🛠️</span> Helpers</a></li>
-  <li><a href="football.html" class="nav-link "><span class="nav-icon">⚽</span> Modo Fútbol</a></li>
-</ul></nav>
-  <main class="docs-main">
-
-    <header class="docs-page-header" data-icon="🔘">
-      <div class="docs-page-header__badge">Componente</div>
-      <h1>Botones</h1>
-      <p>El componente <code>.btn</code> es la base de todos los botones. Combínalo con modificadores de variante y tamaño.</p>
-    </header>
-
-    <div class="docs-content">
-
-      
-      <nav class="docs-toc rm-mb-4">
-        <div class="docs-toc__title">En esta página</div>
-        <a href="#variantes">Variantes de color</a>
-        <a href="#tamanos">Tamaños</a>
-        <a href="#estados">Estados (hover / disabled)</a>
-        <a href="#combinaciones">Combinaciones</a>
-        <a href="#practica">🏋️ Práctica</a>
-      </nav>
-
-      
-      <div class="docs-section" id="variantes">
-        <div class="docs-section__title">Variantes de color</div>
-        <p class="docs-section__desc">Cuatro variantes que siguen la paleta del framework. Cada una tiene estados hover y active definidos.</p>
-
-        <div class="docs-demo">
-          <div class="docs-demo__label">👁️ <span>Vista previa</span></div>
-          <div class="docs-demo__preview">
-            <button class="rm-btn rm-btn-azul rm-btn-md">btn-primary</button>
-            <button class="rm-btn rm-btn-dorado rm-btn-md">btn-accent</button>
-            <button class="rm-btn rm-btn-blanco rm-btn-md">btn-light</button>
-            <button class="rm-btn rm-btn-borde rm-btn-md">btn-outline</button>
+          <span
+            style="
+              width: 1px;
+              height: 36px;
+              background: rgba(255, 255, 255, 0.3);
+              display: inline-block;
+              margin: 0 6px;
+            "
+          ></span>
+          <img
+            src="../imagenes/parche.png"
+            alt="RM"
+            style="width: 28px; height: 28px; object-fit: contain"
+          />
+          <div class="docs-sidebar__logo-text">
+            Real Madrid CSS
+            <span>Framework Docs</span>
           </div>
-          <div class="docs-code">
-            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
-            <pre>&lt;button class="rm-btn rm-btn-azul rm-btn-md"&gt;btn-primary&lt;/button&gt;
+        </div>
+        <div class="docs-sidebar__section">Inicio</div>
+        <ul class="docs-sidebar__nav">
+          <li>
+            <a href="../index.html" class="nav-link"
+              ><span class="nav-icon">🏠</span> Introducción</a
+            >
+          </li>
+        </ul>
+        <div class="docs-sidebar__section">Componentes</div>
+        <ul class="docs-sidebar__nav">
+          <li>
+            <a href="buttons.html" class="nav-link active"
+              ><span class="nav-icon">🔘</span> Botones</a
+            >
+          </li>
+          <li>
+            <a href="cards.html" class="nav-link"
+              ><span class="nav-icon">🃏</span> Cards</a
+            >
+          </li>
+          <li>
+            <a href="navbar.html" class="nav-link"
+              ><span class="nav-icon">🔝</span> Navbar</a
+            >
+          </li>
+          <li>
+            <a href="alerts.html" class="nav-link"
+              ><span class="nav-icon">🔔</span> Alertas</a
+            >
+          </li>
+          <li>
+            <a href="badges.html" class="nav-link"
+              ><span class="nav-icon">🏷️</span> Badges</a
+            >
+          </li>
+          <li>
+            <a href="forms.html" class="nav-link"
+              ><span class="nav-icon">📝</span> Formularios</a
+            >
+          </li>
+          <li>
+            <a href="tables.html" class="nav-link"
+              ><span class="nav-icon">📊</span> Tablas</a
+            >
+          </li>
+        </ul>
+        <div class="docs-sidebar__section">Layout</div>
+        <ul class="docs-sidebar__nav">
+          <li>
+            <a href="grid.html" class="nav-link"
+              ><span class="nav-icon">⚙️</span> Grid System</a
+            >
+          </li>
+        </ul>
+        <div class="docs-sidebar__section">Utilidades</div>
+        <ul class="docs-sidebar__nav">
+          <li>
+            <a href="helpers.html" class="nav-link"
+              ><span class="nav-icon">🛠️</span> Helpers</a
+            >
+          </li>
+          <li>
+            <a href="football.html" class="nav-link"
+              ><span class="nav-icon">⚽</span> Modo Fútbol</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <main class="docs-main">
+        <header class="docs-page-header" data-icon="🔘">
+          <div class="docs-page-header__badge">Componente</div>
+          <h1>Botones</h1>
+          <p>
+            El componente <code>.btn</code> es la base de todos los botones.
+            Combínalo con modificadores de variante y tamaño.
+          </p>
+        </header>
+
+        <div class="docs-content">
+          <nav class="docs-toc rm-mb-4">
+            <div class="docs-toc__title">En esta página</div>
+            <a href="#variantes">Variantes de color</a>
+            <a href="#tamanos">Tamaños</a>
+            <a href="#estados">Estados (hover / disabled)</a>
+            <a href="#combinaciones">Combinaciones</a>
+            <a href="#practica">🏋️ Práctica</a>
+          </nav>
+
+          <div class="docs-section" id="variantes">
+            <div class="docs-section__title">Variantes de color</div>
+            <p class="docs-section__desc">
+              Cuatro variantes que siguen la paleta del framework. Cada una
+              tiene estados hover y active definidos.
+            </p>
+
+            <div class="docs-demo">
+              <div class="docs-demo__label">👁️ <span>Vista previa</span></div>
+              <div class="docs-demo__preview">
+                <button class="rm-btn rm-btn-azul rm-btn-md">
+                  btn-primary
+                </button>
+                <button class="rm-btn rm-btn-dorado rm-btn-md">
+                  btn-accent
+                </button>
+                <button class="rm-btn rm-btn-blanco rm-btn-md">
+                  btn-light
+                </button>
+                <button class="rm-btn rm-btn-borde rm-btn-md">
+                  btn-outline
+                </button>
+              </div>
+              <div class="docs-code">
+                <div class="docs-code__header">
+                  <span class="docs-code__lang">HTML</span>
+                </div>
+                <pre>
+&lt;button class="rm-btn rm-btn-azul rm-btn-md"&gt;btn-primary&lt;/button&gt;
 &lt;button class="rm-btn rm-btn-dorado rm-btn-md"&gt;btn-accent&lt;/button&gt;
 &lt;button class="rm-btn rm-btn-blanco rm-btn-md"&gt;btn-light&lt;/button&gt;
-&lt;button class="rm-btn rm-btn-borde rm-btn-md"&gt;btn-outline&lt;/button&gt;</pre>
+&lt;button class="rm-btn rm-btn-borde rm-btn-md"&gt;btn-outline&lt;/button&gt;</pre
+                >
+              </div>
+            </div>
+
+            <table class="docs-props">
+              <thead>
+                <tr>
+                  <th>Clase</th>
+                  <th>Fondo</th>
+                  <th>Texto</th>
+                  <th>Hover</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>.btn-primary</code></td>
+                  <td>Azul Madrid #00529F</td>
+                  <td>Blanco</td>
+                  <td>Azul más oscuro + glow dorado</td>
+                </tr>
+                <tr>
+                  <td><code>.btn-accent</code></td>
+                  <td>Dorado #FEBE10</td>
+                  <td>Azul Madrid</td>
+                  <td>Dorado más oscuro + glow</td>
+                </tr>
+                <tr>
+                  <td><code>.btn-light</code></td>
+                  <td>Blanco #FFFFFF</td>
+                  <td>Azul Madrid</td>
+                  <td>Gris muy claro</td>
+                </tr>
+                <tr>
+                  <td><code>.btn-outline</code></td>
+                  <td>Transparente</td>
+                  <td>Azul Madrid</td>
+                  <td>Fondo azul + borde dorado</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        </div>
 
-        <table class="docs-props">
-          <thead><tr><th>Clase</th><th>Fondo</th><th>Texto</th><th>Hover</th></tr></thead>
-          <tbody>
-            <tr><td><code>.btn-primary</code></td><td>Azul Madrid #00529F</td><td>Blanco</td><td>Azul más oscuro + glow dorado</td></tr>
-            <tr><td><code>.btn-accent</code></td><td>Dorado #FEBE10</td><td>Azul Madrid</td><td>Dorado más oscuro + glow</td></tr>
-            <tr><td><code>.btn-light</code></td><td>Blanco #FFFFFF</td><td>Azul Madrid</td><td>Gris muy claro</td></tr>
-            <tr><td><code>.btn-outline</code></td><td>Transparente</td><td>Azul Madrid</td><td>Fondo azul + borde dorado</td></tr>
-          </tbody>
-        </table>
-      </div>
+          <div class="docs-section" id="tamanos">
+            <div class="docs-section__title">Tamaños</div>
+            <p class="docs-section__desc">
+              Tres tamaños disponibles. Siempre se combina el modificador de
+              tamaño con el de variante.
+            </p>
 
-      
-      <div class="docs-section" id="tamanos">
-        <div class="docs-section__title">Tamaños</div>
-        <p class="docs-section__desc">Tres tamaños disponibles. Siempre se combina el modificador de tamaño con el de variante.</p>
-
-        <div class="docs-demo">
-          <div class="docs-demo__label">👁️ <span>Vista previa</span></div>
-          <div class="docs-demo__preview rm-ai-centro">
-            <button class="rm-btn rm-btn-azul rm-btn-sm">btn-sm</button>
-            <button class="rm-btn rm-btn-azul rm-btn-md">btn-md</button>
-            <button class="rm-btn rm-btn-azul rm-btn-lg">btn-lg</button>
-          </div>
-          <div class="docs-code">
-            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
-            <pre>&lt;button class="rm-btn rm-btn-azul rm-btn-sm"&gt;btn-sm&lt;/button&gt;
+            <div class="docs-demo">
+              <div class="docs-demo__label">👁️ <span>Vista previa</span></div>
+              <div class="docs-demo__preview rm-ai-centro">
+                <button class="rm-btn rm-btn-azul rm-btn-sm">btn-sm</button>
+                <button class="rm-btn rm-btn-azul rm-btn-md">btn-md</button>
+                <button class="rm-btn rm-btn-azul rm-btn-lg">btn-lg</button>
+              </div>
+              <div class="docs-code">
+                <div class="docs-code__header">
+                  <span class="docs-code__lang">HTML</span>
+                </div>
+                <pre>
+&lt;button class="rm-btn rm-btn-azul rm-btn-sm"&gt;btn-sm&lt;/button&gt;
 &lt;button class="rm-btn rm-btn-azul rm-btn-md"&gt;btn-md&lt;/button&gt;
-&lt;button class="rm-btn rm-btn-azul rm-btn-lg"&gt;btn-lg&lt;/button&gt;</pre>
+&lt;button class="rm-btn rm-btn-azul rm-btn-lg"&gt;btn-lg&lt;/button&gt;</pre
+                >
+              </div>
+            </div>
+
+            <table class="docs-props">
+              <thead>
+                <tr>
+                  <th>Clase</th>
+                  <th>Padding</th>
+                  <th>Font-size</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>.rm-btn-sm</code></td>
+                  <td>0.25rem 0.5rem</td>
+                  <td>0.875rem (14px)</td>
+                </tr>
+                <tr>
+                  <td><code>.rm-btn-md</code></td>
+                  <td>0.5rem 1rem</td>
+                  <td>1rem (16px)</td>
+                </tr>
+                <tr>
+                  <td><code>.rm-btn-lg</code></td>
+                  <td>0.75rem 1.5rem</td>
+                  <td>1.25rem (20px)</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="docs-callout docs-callout--tip">
+              <span class="docs-callout__icon">💡</span>
+              <div>
+                <strong>Buena práctica:</strong> Siempre usa los tres
+                modificadores juntos:
+                <code>class="rm-btn rm-btn-[variante] rm-btn-[tamaño]"</code>.
+                La clase <code>.btn</code> sola no aplica color ni tamaño.
+              </div>
+            </div>
           </div>
-        </div>
 
-        <table class="docs-props">
-          <thead><tr><th>Clase</th><th>Padding</th><th>Font-size</th></tr></thead>
-          <tbody>
-            <tr><td><code>.rm-btn-sm</code></td><td>0.25rem 0.5rem</td><td>0.875rem (14px)</td></tr>
-            <tr><td><code>.rm-btn-md</code></td><td>0.5rem 1rem</td><td>1rem (16px)</td></tr>
-            <tr><td><code>.rm-btn-lg</code></td><td>0.75rem 1.5rem</td><td>1.25rem (20px)</td></tr>
-          </tbody>
-        </table>
+          <div class="docs-section" id="estados">
+            <div class="docs-section__title">Estados</div>
+            <p class="docs-section__desc">
+              Los botones reaccionan a hover y active automáticamente. El estado
+              disabled se puede aplicar con el atributo HTML o la clase.
+            </p>
 
-        <div class="docs-callout docs-callout--tip">
-          <span class="docs-callout__icon">💡</span>
-          <div><strong>Buena práctica:</strong> Siempre usa los tres modificadores juntos: <code>class="rm-btn rm-btn-[variante] rm-btn-[tamaño]"</code>. La clase <code>.btn</code> sola no aplica color ni tamaño.</div>
-        </div>
-      </div>
-
-      
-      <div class="docs-section" id="estados">
-        <div class="docs-section__title">Estados</div>
-        <p class="docs-section__desc">Los botones reaccionan a hover y active automáticamente. El estado disabled se puede aplicar con el atributo HTML o la clase.</p>
-
-        <div class="docs-demo">
-          <div class="docs-demo__label">👁️ <span>Vista previa</span> — intenta hacer hover</div>
-          <div class="docs-demo__preview">
-            <button class="rm-btn rm-btn-azul rm-btn-md">Normal</button>
-            <button class="rm-btn rm-btn-azul rm-btn-md rm-deshabilitado">Disabled (.disabled)</button>
-            <button class="rm-btn rm-btn-dorado rm-btn-md" disabled>Disabled (attr)</button>
-          </div>
-          <div class="docs-code">
-            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
-            <pre>&lt;!-- Normal --&gt;
+            <div class="docs-demo">
+              <div class="docs-demo__label">
+                👁️ <span>Vista previa</span> — intenta hacer hover
+              </div>
+              <div class="docs-demo__preview">
+                <button class="rm-btn rm-btn-azul rm-btn-md">Normal</button>
+                <button class="rm-btn rm-btn-azul rm-btn-md rm-deshabilitado">
+                  Disabled (.disabled)
+                </button>
+                <button class="rm-btn rm-btn-dorado rm-btn-md" disabled>
+                  Disabled (attr)
+                </button>
+              </div>
+              <div class="docs-code">
+                <div class="docs-code__header">
+                  <span class="docs-code__lang">HTML</span>
+                </div>
+                <pre>
+&lt;!-- Normal --&gt;
 &lt;button class="rm-btn rm-btn-azul rm-btn-md"&gt;Normal&lt;/button&gt;
 
 &lt;!-- Disabled con clase --&gt;
 &lt;button class="rm-btn rm-btn-azul rm-btn-md rm-deshabilitado"&gt;Disabled&lt;/button&gt;
 
 &lt;!-- Disabled con atributo HTML --&gt;
-&lt;button class="rm-btn rm-btn-dorado rm-btn-md" disabled&gt;Disabled&lt;/button&gt;</pre>
-          </div>
-        </div>
-      </div>
-
-      
-      <div class="docs-section" id="combinaciones">
-        <div class="docs-section__title">Combinaciones comunes</div>
-        <p class="docs-section__desc">Ejemplos de cómo usar botones en contextos reales del framework.</p>
-
-        <div class="docs-demo">
-          <div class="docs-demo__label">👁️ <span>Vista previa</span> — grupo de botones en card</div>
-          <div class="docs-demo__preview docs-demo__preview--block">
-            <div class="card" class="rm-card-demo">
-              <div class="card__body">
-                <div class="card__title">Ficha de jugador</div>
-                <p class="card__text">Selecciona una acción para continuar con el formulario de inscripción.</p>
-                <div class="rm-flex rm-gap-2">
-                  <button class="rm-btn rm-btn-azul rm-btn-md">Confirmar</button>
-                  <button class="rm-btn rm-btn-borde rm-btn-md">Cancelar</button>
-                </div>
+&lt;button class="rm-btn rm-btn-dorado rm-btn-md" disabled&gt;Disabled&lt;/button&gt;</pre
+                >
               </div>
             </div>
           </div>
-          <div class="docs-code">
-            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
-            <pre>&lt;div class="card"&gt;
+
+          <div class="docs-section" id="combinaciones">
+            <div class="docs-section__title">Combinaciones comunes</div>
+            <p class="docs-section__desc">
+              Ejemplos de cómo usar botones en contextos reales del framework.
+            </p>
+
+            <div class="docs-demo">
+              <div class="docs-demo__label">
+                👁️ <span>Vista previa</span> — grupo de botones en card
+              </div>
+              <div class="docs-demo__preview docs-demo__preview--block">
+                <div class="card" class="rm-card-demo">
+                  <div class="card__body">
+                    <div class="card__title">Ficha de jugador</div>
+                    <p class="card__text">
+                      Selecciona una acción para continuar con el formulario de
+                      inscripción.
+                    </p>
+                    <div class="rm-flex rm-gap-2">
+                      <button class="rm-btn rm-btn-azul rm-btn-md">
+                        Confirmar
+                      </button>
+                      <button class="rm-btn rm-btn-borde rm-btn-md">
+                        Cancelar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="docs-code">
+                <div class="docs-code__header">
+                  <span class="docs-code__lang">HTML</span>
+                </div>
+                <pre>
+&lt;div class="card"&gt;
   &lt;div class="card__body"&gt;
     &lt;div class="card__title"&gt;Ficha de jugador&lt;/div&gt;
     &lt;p class="card__text"&gt;Selecciona una acción...&lt;/p&gt;
@@ -191,127 +354,217 @@
       &lt;button class="rm-btn rm-btn-borde rm-btn-md"&gt;Cancelar&lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</pre>
-          </div>
-        </div>
+&lt;/div&gt;</pre
+                >
+              </div>
+            </div>
 
-        <div class="docs-demo">
-          <div class="docs-demo__label">👁️ <span>Vista previa</span> — botones como enlaces de navbar</div>
-          <div class="docs-demo__preview">
-            <a href="#" class="rm-btn rm-btn-dorado rm-btn-sm">⚽ Modo Fútbol</a>
-            <a href="#" class="rm-btn rm-btn-borde rm-btn-sm">Documentación</a>
-            <a href="#" class="rm-btn rm-btn-azul rm-btn-sm">Descargar</a>
-          </div>
-          <div class="docs-code">
-            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
-            <pre>&lt;!-- Los botones también funcionan como &lt;a&gt; --&gt;
+            <div class="docs-demo">
+              <div class="docs-demo__label">
+                👁️ <span>Vista previa</span> — botones como enlaces de navbar
+              </div>
+              <div class="docs-demo__preview">
+                <a href="#" class="rm-btn rm-btn-dorado rm-btn-sm"
+                  >⚽ Modo Fútbol</a
+                >
+                <a href="#" class="rm-btn rm-btn-borde rm-btn-sm"
+                  >Documentación</a
+                >
+                <a href="#" class="rm-btn rm-btn-azul rm-btn-sm">Descargar</a>
+              </div>
+              <div class="docs-code">
+                <div class="docs-code__header">
+                  <span class="docs-code__lang">HTML</span>
+                </div>
+                <pre>
+&lt;!-- Los botones también funcionan como &lt;a&gt; --&gt;
 &lt;a href="#" class="rm-btn rm-btn-dorado rm-btn-sm"&gt;⚽ Modo Fútbol&lt;/a&gt;
 &lt;a href="#" class="rm-btn rm-btn-borde rm-btn-sm"&gt;Documentación&lt;/a&gt;
-&lt;a href="#" class="rm-btn rm-btn-azul rm-btn-sm"&gt;Descargar&lt;/a&gt;</pre>
+&lt;a href="#" class="rm-btn rm-btn-azul rm-btn-sm"&gt;Descargar&lt;/a&gt;</pre
+                >
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      
-      <div class="docs-section" id="aliases-madrid">
-        <div class="docs-section__title">Nombres propios del framework</div>
-        <p class="docs-section__desc">Además de los nombres genéricos, Madrid CSS ofrece aliases con identidad propia. Son equivalentes exactos — úsalos para hacer tu código más expresivo.</p>
-        <div class="docs-demo">
-          <div class="docs-demo__label">👁️ <span>Vista previa</span></div>
-          <div class="docs-demo__preview rm-flex-envolver">
-            <button class="rm-btn rm-btn-azul rm-btn-md">btn-madrid</button>
-            <button class="rm-btn rm-btn-dorado rm-btn-md">btn-dorado</button>
-            <button class="rm-btn rm-btn-blanco rm-btn-md">btn-blanco</button>
-            <button class="rm-btn rm-btn-borde rm-btn-md">btn-contorno</button>
-          </div>
-          <div class="docs-code">
-            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
-            <pre>&lt;button class="rm-btn rm-btn-azul rm-btn-md"&gt;btn-madrid&lt;/button&gt;   &lt;!-- = rm-btn-azul --&gt;
+
+          <div class="docs-section" id="aliases-madrid">
+            <div class="docs-section__title">Nombres propios del framework</div>
+            <p class="docs-section__desc">
+              Además de los nombres genéricos, Madrid CSS ofrece aliases con
+              identidad propia. Son equivalentes exactos — úsalos para hacer tu
+              código más expresivo.
+            </p>
+            <div class="docs-demo">
+              <div class="docs-demo__label">👁️ <span>Vista previa</span></div>
+              <div class="docs-demo__preview rm-flex-envolver">
+                <button class="rm-btn rm-btn-azul rm-btn-md">btn-madrid</button>
+                <button class="rm-btn rm-btn-dorado rm-btn-md">
+                  btn-dorado
+                </button>
+                <button class="rm-btn rm-btn-blanco rm-btn-md">
+                  btn-blanco
+                </button>
+                <button class="rm-btn rm-btn-borde rm-btn-md">
+                  btn-contorno
+                </button>
+              </div>
+              <div class="docs-code">
+                <div class="docs-code__header">
+                  <span class="docs-code__lang">HTML</span>
+                </div>
+                <pre>
+&lt;button class="rm-btn rm-btn-azul rm-btn-md"&gt;btn-madrid&lt;/button&gt;   &lt;!-- = rm-btn-azul --&gt;
 &lt;button class="rm-btn rm-btn-dorado rm-btn-md"&gt;btn-dorado&lt;/button&gt;   &lt;!-- = rm-btn-dorado  --&gt;
 &lt;button class="rm-btn rm-btn-blanco rm-btn-md"&gt;btn-blanco&lt;/button&gt;   &lt;!-- = rm-btn-blanco   --&gt;
-&lt;button class="rm-btn rm-btn-borde rm-btn-md"&gt;btn-contorno&lt;/button&gt; &lt;!-- = rm-btn-borde --&gt;</pre>
+&lt;button class="rm-btn rm-btn-borde rm-btn-md"&gt;btn-contorno&lt;/button&gt; &lt;!-- = rm-btn-borde --&gt;</pre
+                >
+              </div>
+            </div>
+            <table class="docs-props rm-mt-3">
+              <thead>
+                <tr>
+                  <th>Alias Madrid</th>
+                  <th>Equivalente genérico</th>
+                  <th>Color</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>.btn-madrid</code></td>
+                  <td><code>.btn-primary</code></td>
+                  <td>Azul Madrid #00529F</td>
+                </tr>
+                <tr>
+                  <td><code>.btn-dorado</code></td>
+                  <td><code>.btn-accent</code></td>
+                  <td>Dorado Madrid #FEBE10</td>
+                </tr>
+                <tr>
+                  <td><code>.btn-blanco</code></td>
+                  <td><code>.btn-light</code></td>
+                  <td>Blanco Madrid #FFFFFF</td>
+                </tr>
+                <tr>
+                  <td><code>.btn-contorno</code></td>
+                  <td><code>.btn-outline</code></td>
+                  <td>Contorno azul transparente</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        </div>
-        <table class="docs-props rm-mt-3">
-          <thead><tr><th>Alias Madrid</th><th>Equivalente genérico</th><th>Color</th></tr></thead>
-          <tbody>
-            <tr><td><code>.btn-madrid</code></td><td><code>.btn-primary</code></td><td>Azul Madrid #00529F</td></tr>
-            <tr><td><code>.btn-dorado</code></td><td><code>.btn-accent</code></td><td>Dorado Madrid #FEBE10</td></tr>
-            <tr><td><code>.btn-blanco</code></td><td><code>.btn-light</code></td><td>Blanco Madrid #FFFFFF</td></tr>
-            <tr><td><code>.btn-contorno</code></td><td><code>.btn-outline</code></td><td>Contorno azul transparente</td></tr>
-          </tbody>
-        </table>
-      </div>
 
-      
-      <div class="docs-section" id="practica">
-        <div class="docs-section__title">🏋️ Práctica — Botones</div>
+          <div class="docs-section" id="practica">
+            <div class="docs-section__title">🏋️ Práctica — Botones</div>
 
-        <div class="docs-practice">
-          <div class="docs-practice__header">
-            <div class="docs-practice__icon">⚡</div>
-            <div>
-              <div class="docs-practice__title">Ejercicio 1 — Tu primer botón</div>
-              <div class="docs-practice__sub">Nivel: Principiante · 2 min</div>
+            <div class="docs-practice">
+              <div class="docs-practice__header">
+                <div class="docs-practice__icon">⚡</div>
+                <div>
+                  <div class="docs-practice__title">
+                    Ejercicio 1 — Tu primer botón
+                  </div>
+                  <div class="docs-practice__sub">
+                    Nivel: Principiante · 2 min
+                  </div>
+                </div>
+              </div>
+              <ol>
+                <li>
+                  Crea un botón de tipo <strong>accent</strong> con tamaño
+                  <strong>grande</strong>
+                </li>
+                <li>
+                  El texto del botón debe decir <strong>"¡Hala Madrid!"</strong>
+                </li>
+                <li>Prueba pasar el cursor sobre él para ver el glow dorado</li>
+              </ol>
+              <div class="docs-practice__editor">
+                <div class="docs-practice__editor-bar">
+                  <span class="docs-practice__editor-label">✏️ Tu código</span>
+                </div>
+                <textarea
+                  placeholder='Escribe aquí tu HTML...
+Pista: class="btn btn-??? btn-???"'
+                ></textarea>
+              </div>
+              <div class="docs-practice__result-mt">
+                <div class="docs-practice__result-label">🖥️ Resultado</div>
+                <div class="docs-practice__result">
+                  <div
+                    class="docs-practice__result-content"
+                    class="docs-result-empty"
+                  >
+                    El resultado aparecerá aquí...
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <ol>
-            <li>Crea un botón de tipo <strong>accent</strong> con tamaño <strong>grande</strong></li>
-            <li>El texto del botón debe decir <strong>"¡Hala Madrid!"</strong></li>
-            <li>Prueba pasar el cursor sobre él para ver el glow dorado</li>
-          </ol>
-          <div class="docs-practice__editor">
-            <div class="docs-practice__editor-bar">
-              <span class="docs-practice__editor-label">✏️ Tu código</span>
-              
-            </div>
-            <textarea placeholder="Escribe aquí tu HTML...
-Pista: class=&quot;btn btn-??? btn-???&quot;"></textarea>
-          </div>
-          <div class="docs-practice__result-mt">
-            <div class="docs-practice__result-label">🖥️ Resultado</div>
-            <div class="docs-practice__result"><div class="docs-practice__result-content" class="docs-result-empty">El resultado aparecerá aquí...</div></div>
-          </div>
-        </div>
 
-        <div class="docs-practice">
-          <div class="docs-practice__header">
-            <div class="docs-practice__icon">🧠</div>
-            <div>
-              <div class="docs-practice__title">Ejercicio 2 — Grupo de acción</div>
-              <div class="docs-practice__sub">Nivel: Intermedio · 5 min</div>
-            </div>
-          </div>
-          <ol>
-            <li>Crea una fila (<code>div</code> con <code>display:flex; gap:0.5rem</code>) con 3 botones</li>
-            <li>Un botón <strong>primary grande</strong> que diga "Contratar"</li>
-            <li>Un botón <strong>outline mediano</strong> que diga "Ver perfil"</li>
-            <li>Un botón <strong>accent pequeño</strong> deshabilitado con texto "Agotado"</li>
-          </ol>
-          <div class="docs-practice__editor">
-            <div class="docs-practice__editor-bar">
-              <span class="docs-practice__editor-label">✏️ Tu código</span>
-              
-            </div>
-            <textarea placeholder="&lt;div style=&quot;display:flex; gap:0.5rem;&quot;&gt;
+            <div class="docs-practice">
+              <div class="docs-practice__header">
+                <div class="docs-practice__icon">🧠</div>
+                <div>
+                  <div class="docs-practice__title">
+                    Ejercicio 2 — Grupo de acción
+                  </div>
+                  <div class="docs-practice__sub">
+                    Nivel: Intermedio · 5 min
+                  </div>
+                </div>
+              </div>
+              <ol>
+                <li>
+                  Crea una fila (<code>div</code> con
+                  <code>display:flex; gap:0.5rem</code>) con 3 botones
+                </li>
+                <li>
+                  Un botón <strong>primary grande</strong> que diga "Contratar"
+                </li>
+                <li>
+                  Un botón <strong>outline mediano</strong> que diga "Ver
+                  perfil"
+                </li>
+                <li>
+                  Un botón <strong>accent pequeño</strong> deshabilitado con
+                  texto "Agotado"
+                </li>
+              </ol>
+              <div class="docs-practice__editor">
+                <div class="docs-practice__editor-bar">
+                  <span class="docs-practice__editor-label">✏️ Tu código</span>
+                </div>
+                <textarea
+                  placeholder='&lt;div style="display:flex; gap:0.5rem;"&gt;
   &lt;!-- Tus botones aquí --&gt;
-&lt;/div&gt;"></textarea>
-          </div>
-          <div class="docs-practice__result-mt">
-            <div class="docs-practice__result-label">🖥️ Resultado</div>
-            <div class="docs-practice__result"><div class="docs-practice__result-content" class="docs-result-empty">El resultado aparecerá aquí...</div></div>
+&lt;/div&gt;'
+                ></textarea>
+              </div>
+              <div class="docs-practice__result-mt">
+                <div class="docs-practice__result-label">🖥️ Resultado</div>
+                <div class="docs-practice__result">
+                  <div
+                    class="docs-practice__result-content"
+                    class="docs-result-empty"
+                  >
+                    El resultado aparecerá aquí...
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="docs-callout docs-callout--warn">
+              <span class="docs-callout__icon">🏆</span>
+              <div>
+                <strong>Desafío:</strong> Crea una barra de acciones completa
+                con un botón principal, uno secundario y uno de peligro.
+                Colócalos dentro de un <code>.card</code> con título y
+                descripción.
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="docs-callout docs-callout--warn">
-          <span class="docs-callout__icon">🏆</span>
-          <div><strong>Desafío:</strong> Crea una barra de acciones completa con un botón principal, uno secundario y uno de peligro. Colócalos dentro de un <code>.card</code> con título y descripción.</div>
-        </div>
-      </div>
-
+      </main>
     </div>
-  </main>
-</div>
 
-<label for="sidebar-css-toggle" class="docs-toggle">☰</label>
-</body>
+    <label for="sidebar-css-toggle" class="docs-toggle">☰</label>
+  </body>
 </html>

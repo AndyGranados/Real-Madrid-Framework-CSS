@@ -1,93 +1,203 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formularios — Real Madrid CSS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/docs.css">
-  <link rel="icon" href="../imagenes/logomadrid.png">
-</head>
-<body data-page="forms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios — Real Madrid CSS</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/docs.css" />
+    <link rel="icon" href="../imagenes/logomadrid.png" />
+  </head>
+  <body data-page="forms">
+    <input
+      type="checkbox"
+      id="sidebar-css-toggle"
+      class="docs-sidebar-toggle"
+    />
+    <div class="docs-layout">
+      <nav class="docs-sidebar" id="docs-sidebar">
+        <div class="docs-sidebar__logo">
+          <img
+            src="../imagenes/logomadrid.png"
+            alt="RM"
+            style="width: 28px; height: 28px; object-fit: contain"
+          />
 
-<input type="checkbox" id="sidebar-css-toggle" class="docs-sidebar-toggle">
-<div class="docs-layout">
-  <nav class="docs-sidebar" id="docs-sidebar"><div class="docs-sidebar__logo">
- <img src="../imagenes/logomadrid.png" alt="RM" style="width:28px; height:28px; object-fit:contain;">
-
-<span style="width:1px; height:36px; background:rgba(255,255,255,0.3); display:inline-block; margin:0 6px;"></span>
-   <img src="../imagenes/parche.png" alt="RM" style="width:28px; height:28px; object-fit:contain;">
-  <div class="docs-sidebar__logo-text">
-    Real Madrid CSS
-    <span>Framework Docs</span>
-  </div>
-</div>
-<div class="docs-sidebar__section">Inicio</div>
-<ul class="docs-sidebar__nav">
-  <li><a href="../index.html" class="nav-link "><span class="nav-icon">🏠</span> Introducción</a></li>
-</ul>
-<div class="docs-sidebar__section">Componentes</div>
-<ul class="docs-sidebar__nav">
-  <li><a href="buttons.html" class="nav-link "><span class="nav-icon">🔘</span> Botones</a></li>
-  <li><a href="cards.html" class="nav-link "><span class="nav-icon">🃏</span> Cards</a></li>
-  <li><a href="navbar.html" class="nav-link "><span class="nav-icon">🔝</span> Navbar</a></li>
-  <li><a href="alerts.html" class="nav-link "><span class="nav-icon">🔔</span> Alertas</a></li>
-  <li><a href="badges.html" class="nav-link "><span class="nav-icon">🏷️</span> Badges</a></li>
-  <li><a href="forms.html" class="nav-link active"><span class="nav-icon">📝</span> Formularios</a></li>
-  <li><a href="tables.html" class="nav-link "><span class="nav-icon">📊</span> Tablas</a></li>
-</ul>
-<div class="docs-sidebar__section">Layout</div>
-<ul class="docs-sidebar__nav">
-  <li><a href="grid.html" class="nav-link "><span class="nav-icon">⚙️</span> Grid System</a></li>
-</ul>
-<div class="docs-sidebar__section">Utilidades</div>
-<ul class="docs-sidebar__nav">
-  <li><a href="helpers.html" class="nav-link "><span class="nav-icon">🛠️</span> Helpers</a></li>
-  <li><a href="football.html" class="nav-link "><span class="nav-icon">⚽</span> Modo Fútbol</a></li>
-</ul></nav>
-  <main class="docs-main">
-    <header class="docs-page-header" data-icon="📝">
-      <div class="docs-page-header__badge">Componente</div>
-      <h1>Formularios</h1>
-      <p>Campos de formulario estilizados con focus dorado y etiquetas azules. Estructura BEM: <code>.form__group</code>, <code>.form__label</code>, <code>.form__control</code>.</p>
-    </header>
-    <div class="docs-content">
-
-      <div class="docs-section" id="estructura">
-        <div class="docs-section__title">Estructura básica</div>
-        <table class="docs-props">
-          <thead><tr><th>Clase</th><th>Elemento</th><th>Descripción</th></tr></thead>
-          <tbody>
-            <tr><td><code>.form__group</code></td><td>div</td><td>Contenedor de campo — margin-bottom 1rem</td></tr>
-            <tr><td><code>.form__label</code></td><td>label</td><td>Etiqueta azul, bold, display block</td></tr>
-            <tr><td><code>.form__control</code></td><td>input / select / textarea</td><td>Campo completo — focus con borde y glow dorado</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="docs-section" id="campos">
-        <div class="docs-section__title">Todos los tipos de campo</div>
-        <div class="docs-demo">
-          <div class="docs-demo__label">👁️ <span>Vista previa</span> — haz click en los campos</div>
-          <div class="docs-demo__preview--block" style="padding:1.5rem; max-width:500px;">
-            <div class="form__group">
-              <label class="form__label">Nombre del jugador</label>
-              <input type="text" class="form__control" placeholder="Ej: Vinícius Jr.">
-            </div>
-            <div class="form__group">
-              <label class="form__label">Posición</label>
-              <select class="form__control">
-                <option>Portero</option><option>Defensa</option><option>Centrocampista</option><option>Delantero</option>
-              </select>
-            </div>
-            <div class="form__group">
-              <label class="form__label">Observaciones</label>
-              <textarea class="form__control" rows="3" placeholder="Notas del entrenador..."></textarea>
-            </div>
+          <span
+            style="
+              width: 1px;
+              height: 36px;
+              background: rgba(255, 255, 255, 0.3);
+              display: inline-block;
+              margin: 0 6px;
+            "
+          ></span>
+          <img
+            src="../imagenes/parche.png"
+            alt="RM"
+            style="width: 28px; height: 28px; object-fit: contain"
+          />
+          <div class="docs-sidebar__logo-text">
+            Real Madrid CSS
+            <span>Framework Docs</span>
           </div>
-          <div class="docs-code">
-            <div class="docs-code__header"><span class="docs-code__lang">HTML</span><button class="docs-code__copy">Copiar</button></div>
-            <pre>&lt;div class="form__group"&gt;
+        </div>
+        <div class="docs-sidebar__section">Inicio</div>
+        <ul class="docs-sidebar__nav">
+          <li>
+            <a href="../index.html" class="nav-link"
+              ><span class="nav-icon">🏠</span> Introducción</a
+            >
+          </li>
+        </ul>
+        <div class="docs-sidebar__section">Componentes</div>
+        <ul class="docs-sidebar__nav">
+          <li>
+            <a href="buttons.html" class="nav-link"
+              ><span class="nav-icon">🔘</span> Botones</a
+            >
+          </li>
+          <li>
+            <a href="cards.html" class="nav-link"
+              ><span class="nav-icon">🃏</span> Cards</a
+            >
+          </li>
+          <li>
+            <a href="navbar.html" class="nav-link"
+              ><span class="nav-icon">🔝</span> Navbar</a
+            >
+          </li>
+          <li>
+            <a href="alerts.html" class="nav-link"
+              ><span class="nav-icon">🔔</span> Alertas</a
+            >
+          </li>
+          <li>
+            <a href="badges.html" class="nav-link"
+              ><span class="nav-icon">🏷️</span> Badges</a
+            >
+          </li>
+          <li>
+            <a href="forms.html" class="nav-link active"
+              ><span class="nav-icon">📝</span> Formularios</a
+            >
+          </li>
+          <li>
+            <a href="tables.html" class="nav-link"
+              ><span class="nav-icon">📊</span> Tablas</a
+            >
+          </li>
+        </ul>
+        <div class="docs-sidebar__section">Layout</div>
+        <ul class="docs-sidebar__nav">
+          <li>
+            <a href="grid.html" class="nav-link"
+              ><span class="nav-icon">⚙️</span> Grid System</a
+            >
+          </li>
+        </ul>
+        <div class="docs-sidebar__section">Utilidades</div>
+        <ul class="docs-sidebar__nav">
+          <li>
+            <a href="helpers.html" class="nav-link"
+              ><span class="nav-icon">🛠️</span> Helpers</a
+            >
+          </li>
+          <li>
+            <a href="football.html" class="nav-link"
+              ><span class="nav-icon">⚽</span> Modo Fútbol</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <main class="docs-main">
+        <header class="docs-page-header" data-icon="📝">
+          <div class="docs-page-header__badge">Componente</div>
+          <h1>Formularios</h1>
+          <p>
+            Campos de formulario estilizados con focus dorado y etiquetas
+            azules. Estructura BEM: <code>.form__group</code>,
+            <code>.form__label</code>, <code>.form__control</code>.
+          </p>
+        </header>
+        <div class="docs-content">
+          <div class="docs-section" id="estructura">
+            <div class="docs-section__title">Estructura básica</div>
+            <table class="docs-props">
+              <thead>
+                <tr>
+                  <th>Clase</th>
+                  <th>Elemento</th>
+                  <th>Descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>.form__group</code></td>
+                  <td>div</td>
+                  <td>Contenedor de campo — margin-bottom 1rem</td>
+                </tr>
+                <tr>
+                  <td><code>.form__label</code></td>
+                  <td>label</td>
+                  <td>Etiqueta azul, bold, display block</td>
+                </tr>
+                <tr>
+                  <td><code>.form__control</code></td>
+                  <td>input / select / textarea</td>
+                  <td>Campo completo — focus con borde y glow dorado</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="docs-section" id="campos">
+            <div class="docs-section__title">Todos los tipos de campo</div>
+            <div class="docs-demo">
+              <div class="docs-demo__label">
+                👁️ <span>Vista previa</span> — haz click en los campos
+              </div>
+              <div
+                class="docs-demo__preview--block"
+                style="padding: 1.5rem; max-width: 500px"
+              >
+                <div class="form__group">
+                  <label class="form__label">Nombre del jugador</label>
+                  <input
+                    type="text"
+                    class="form__control"
+                    placeholder="Ej: Vinícius Jr."
+                  />
+                </div>
+                <div class="form__group">
+                  <label class="form__label">Posición</label>
+                  <select class="form__control">
+                    <option>Portero</option>
+                    <option>Defensa</option>
+                    <option>Centrocampista</option>
+                    <option>Delantero</option>
+                  </select>
+                </div>
+                <div class="form__group">
+                  <label class="form__label">Observaciones</label>
+                  <textarea
+                    class="form__control"
+                    rows="3"
+                    placeholder="Notas del entrenador..."
+                  ></textarea>
+                </div>
+              </div>
+              <div class="docs-code">
+                <div class="docs-code__header">
+                  <span class="docs-code__lang">HTML</span
+                  ><button class="docs-code__copy">Copiar</button>
+                </div>
+                <pre>
+&lt;div class="form__group"&gt;
   &lt;label class="form__label"&gt;Nombre del jugador&lt;/label&gt;
   &lt;input type="text" class="form__control" placeholder="Ej: Vinícius Jr."&gt;
 &lt;/div&gt;
@@ -103,57 +213,84 @@
 &lt;div class="form__group"&gt;
   &lt;label class="form__label"&gt;Notas&lt;/label&gt;
   &lt;textarea class="form__control" rows="3"&gt;&lt;/textarea&gt;
-&lt;/div&gt;</pre>
-          </div>
-        </div>
-      </div>
-
-      <div class="docs-section" id="form-completo">
-  <div class="docs-section__title">Formulario completo en card</div>
-  <div class="docs-demo">
-    <div class="docs-demo__label">👁️ <span>Vista previa</span> — formulario de inscripción</div>
-    <div class="docs-demo__preview--block docs-demo__preview--bg">
-      <div class="card rm-card-demo--form">
-        <div class="card__body">
-          <div class="card__title">Inscripción de Jugador</div>
-          <p class="card__text form__group">
-            Completa los datos para registrar al jugador en la plantilla.
-          </p>
-
-          <div class="row rm-fila docs-form-row">
-            <div class="col-6 docs-form-col">
-              <div class="form__group">
-                <label class="form__label">Nombre</label>
-                <input type="text" class="form__control" placeholder="Nombre">
-              </div>
-            </div>
-            <div class="col-6 docs-form-col">
-              <div class="form__group">
-                <label class="form__label">Apellido</label>
-                <input type="text" class="form__control" placeholder="Apellido">
+&lt;/div&gt;</pre
+                >
               </div>
             </div>
           </div>
 
-          <div class="form__group">
-            <label class="form__label">Email del agente</label>
-            <input type="email" class="form__control" placeholder="agente@rm.com">
-          </div>
+          <div class="docs-section" id="form-completo">
+            <div class="docs-section__title">Formulario completo en card</div>
+            <div class="docs-demo">
+              <div class="docs-demo__label">
+                👁️ <span>Vista previa</span> — formulario de inscripción
+              </div>
+              <div class="docs-demo__preview--block docs-demo__preview--bg">
+                <div class="card rm-card-demo--form">
+                  <div class="card__body">
+                    <div class="card__title">Inscripción de Jugador</div>
+                    <p class="card__text form__group">
+                      Completa los datos para registrar al jugador en la
+                      plantilla.
+                    </p>
 
-          <div class="form__group">
-            <label class="form__label">Dorsal deseado</label>
-            <input type="number" class="form__control" placeholder="1–99" min="1" max="99">
-          </div>
+                    <div class="row rm-fila docs-form-row">
+                      <div class="col-6 docs-form-col">
+                        <div class="form__group">
+                          <label class="form__label">Nombre</label>
+                          <input
+                            type="text"
+                            class="form__control"
+                            placeholder="Nombre"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-6 docs-form-col">
+                        <div class="form__group">
+                          <label class="form__label">Apellido</label>
+                          <input
+                            type="text"
+                            class="form__control"
+                            placeholder="Apellido"
+                          />
+                        </div>
+                      </div>
+                    </div>
 
-          <button class="rm-btn rm-btn-azul rm-btn-md rm-bloque rm-mt-2">
-            Inscribir jugador
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="docs-code">
-      <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
-      <pre>&lt;div class="card rm-card-demo--form"&gt;
+                    <div class="form__group">
+                      <label class="form__label">Email del agente</label>
+                      <input
+                        type="email"
+                        class="form__control"
+                        placeholder="agente@rm.com"
+                      />
+                    </div>
+
+                    <div class="form__group">
+                      <label class="form__label">Dorsal deseado</label>
+                      <input
+                        type="number"
+                        class="form__control"
+                        placeholder="1–99"
+                        min="1"
+                        max="99"
+                      />
+                    </div>
+
+                    <button
+                      class="rm-btn rm-btn-azul rm-btn-md rm-bloque rm-mt-2"
+                    >
+                      Inscribir jugador
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="docs-code">
+                <div class="docs-code__header">
+                  <span class="docs-code__lang">HTML</span>
+                </div>
+                <pre>
+&lt;div class="card rm-card-demo--form"&gt;
   &lt;div class="card__body"&gt;
     &lt;div class="card__title"&gt;Inscripción de Jugador&lt;/div&gt;
     &lt;p class="card__text form__group"&gt;Completa los datos...&lt;/p&gt;
@@ -183,36 +320,43 @@
       Inscribir jugador
     &lt;/button&gt;
   &lt;/div&gt;
-&lt;/div&gt;</pre>
-    </div>
-  </div>
-</div>
-      
-      <div class="docs-section" id="checkbox">
-        <div class="docs-section__title">Checkboxes y Radio buttons</div>
-        <div class="docs-demo">
-          <div class="docs-demo__label">👁️ <span>Vista previa</span></div>
-          <div class="docs-demo__preview--block" class="docs-demo__preview--form">
-            <label class="form__check">
-              <input type="checkbox" checked>
-              <span class="form__check-label">Titular confirmado</span>
-            </label>
-            <label class="form__check">
-              <input type="checkbox">
-              <span class="form__check-label">Lesionado</span>
-            </label>
-            <label class="form__check">
-              <input type="radio" name="posicion" checked>
-              <span class="form__check-label">Delantero</span>
-            </label>
-            <label class="form__check">
-              <input type="radio" name="posicion">
-              <span class="form__check-label">Mediocampista</span>
-            </label>
+&lt;/div&gt;</pre
+                >
+              </div>
+            </div>
           </div>
-          <div class="docs-code">
-            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
-            <pre>&lt;label class="form__check"&gt;
+
+          <div class="docs-section" id="checkbox">
+            <div class="docs-section__title">Checkboxes y Radio buttons</div>
+            <div class="docs-demo">
+              <div class="docs-demo__label">👁️ <span>Vista previa</span></div>
+              <div
+                class="docs-demo__preview--block"
+                class="docs-demo__preview--form"
+              >
+                <label class="form__check">
+                  <input type="checkbox" checked />
+                  <span class="form__check-label">Titular confirmado</span>
+                </label>
+                <label class="form__check">
+                  <input type="checkbox" />
+                  <span class="form__check-label">Lesionado</span>
+                </label>
+                <label class="form__check">
+                  <input type="radio" name="posicion" checked />
+                  <span class="form__check-label">Delantero</span>
+                </label>
+                <label class="form__check">
+                  <input type="radio" name="posicion" />
+                  <span class="form__check-label">Mediocampista</span>
+                </label>
+              </div>
+              <div class="docs-code">
+                <div class="docs-code__header">
+                  <span class="docs-code__lang">HTML</span>
+                </div>
+                <pre>
+&lt;label class="form__check"&gt;
   &lt;input type="checkbox" checked&gt;
   &lt;span class="form__check-label"&gt;Titular confirmado&lt;/span&gt;
 &lt;/label&gt;
@@ -220,30 +364,51 @@
 &lt;label class="form__check"&gt;
   &lt;input type="radio" name="pos"&gt;
   &lt;span class="form__check-label"&gt;Delantero&lt;/span&gt;
-&lt;/label&gt;</pre>
+&lt;/label&gt;</pre
+                >
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-<div class="docs-section" id="validacion">
-  <div class="docs-section__title">Estados de validación</div>
-  <div class="docs-demo">
-    <div class="docs-demo__label">👁️ <span>Vista previa</span> — campo válido e inválido</div>
-    <div class="docs-demo__preview--block docs-demo__preview--form" style="padding:0 1.5rem; background:#fff;">
-      <div class="form__group">
-        <label class="form__label">Nombre del jugador</label>
-        <input type="text" class="form__control form__control--valid" value="Vinícius Jr.">
-        <span class="form__feedback form__feedback--valid">✓ Jugador verificado en la plantilla</span>
-      </div>
-      <div class="form__group">
-        <label class="form__label">Dorsal</label>
-        <input type="number" class="form__control form__control--invalid" value="99">
-        <span class="form__feedback form__feedback--invalid">✗ Ese número ya está ocupado</span>
-      </div>
-    </div>
-    <div class="docs-code">
-      <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
-      <pre>&lt;!-- Campo válido --&gt;
+          <div class="docs-section" id="validacion">
+            <div class="docs-section__title">Estados de validación</div>
+            <div class="docs-demo">
+              <div class="docs-demo__label">
+                👁️ <span>Vista previa</span> — campo válido e inválido
+              </div>
+              <div
+                class="docs-demo__preview--block docs-demo__preview--form"
+                style="padding: 0 1.5rem; background: #fff"
+              >
+                <div class="form__group">
+                  <label class="form__label">Nombre del jugador</label>
+                  <input
+                    type="text"
+                    class="form__control form__control--valid"
+                    value="Vinícius Jr."
+                  />
+                  <span class="form__feedback form__feedback--valid"
+                    >✓ Jugador verificado en la plantilla</span
+                  >
+                </div>
+                <div class="form__group">
+                  <label class="form__label">Dorsal</label>
+                  <input
+                    type="number"
+                    class="form__control form__control--invalid"
+                    value="99"
+                  />
+                  <span class="form__feedback form__feedback--invalid"
+                    >✗ Ese número ya está ocupado</span
+                  >
+                </div>
+              </div>
+              <div class="docs-code">
+                <div class="docs-code__header">
+                  <span class="docs-code__lang">HTML</span>
+                </div>
+                <pre>
+&lt;!-- Campo válido --&gt;
 &lt;div class="form__group"&gt;
   &lt;label class="form__label"&gt;Nombre&lt;/label&gt;
   &lt;input class="form__control form__control--valid" type="text" value="Vinícius Jr."&gt;
@@ -255,43 +420,71 @@
   &lt;label class="form__label"&gt;Dorsal&lt;/label&gt;
   &lt;input class="form__control form__control--invalid" type="number" value="99"&gt;
   &lt;span class="form__feedback form__feedback--invalid"&gt;✗ Ese número ya está ocupado&lt;/span&gt;
-&lt;/div&gt;</pre>
-    </div>
-  </div>
-</div>
-
-<div class="docs-section" id="practica">
-  <div class="docs-section__title">🏋️ Práctica — Formularios</div>
-    <div class="docs-practice">
-      <div class="docs-practice__header">
-        <div class="docs-practice__icon">⚡</div>
-          <div><div class="docs-practice__title">Ejercicio — Ficha de fichaje</div><div class="docs-practice__sub">Nivel: Intermedio · 8 min</div></div>
+&lt;/div&gt;</pre
+                >
+              </div>
+            </div>
           </div>
-          <ol>
-            <li>Crea un formulario dentro de una <code>.card</code></li>
-            <li>Campos requeridos: nombre, nacionalidad (select con 3 países), valor de mercado (número), descripción (textarea)</li>
-            <li>Botón de envío <code>btn-primary btn-lg</code> a ancho completo</li>
-            <li>Agrega una alerta <code>alert--info</code> antes del formulario con instrucciones</li>
-          </ol>
-          <div class="docs-practice__editor">
-            <div class="docs-practice__editor-bar"><span class="docs-practice__editor-label">✏️ Tu código</span></div>
-            <textarea placeholder="&lt;div class=&quot;alert alert--info&quot;&gt;...&lt;/div&gt;
-&lt;div class=&quot;card&quot;&gt;
-  &lt;div class=&quot;card__body&quot;&gt;
+
+          <div class="docs-section" id="practica">
+            <div class="docs-section__title">🏋️ Práctica — Formularios</div>
+            <div class="docs-practice">
+              <div class="docs-practice__header">
+                <div class="docs-practice__icon">⚡</div>
+                <div>
+                  <div class="docs-practice__title">
+                    Ejercicio — Ficha de fichaje
+                  </div>
+                  <div class="docs-practice__sub">
+                    Nivel: Intermedio · 8 min
+                  </div>
+                </div>
+              </div>
+              <ol>
+                <li>Crea un formulario dentro de una <code>.card</code></li>
+                <li>
+                  Campos requeridos: nombre, nacionalidad (select con 3 países),
+                  valor de mercado (número), descripción (textarea)
+                </li>
+                <li>
+                  Botón de envío <code>btn-primary btn-lg</code> a ancho
+                  completo
+                </li>
+                <li>
+                  Agrega una alerta <code>alert--info</code> antes del
+                  formulario con instrucciones
+                </li>
+              </ol>
+              <div class="docs-practice__editor">
+                <div class="docs-practice__editor-bar">
+                  <span class="docs-practice__editor-label">✏️ Tu código</span>
+                </div>
+                <textarea
+                  placeholder='&lt;div class="alert alert--info"&gt;...&lt;/div&gt;
+&lt;div class="card"&gt;
+  &lt;div class="card__body"&gt;
     &lt;!-- tu formulario --&gt;
   &lt;/div&gt;
-&lt;/div&gt;" ></textarea>
-          </div>
-          <div class="docs-practice__result-mt">
-            <div class="docs-practice__result-label">🖥️ Resultado</div>
-            <div class="docs-practice__result"><div class="docs-practice__result-content" class="docs-result-empty">El resultado aparecerá aquí...</div></div>
+&lt;/div&gt;'
+                ></textarea>
+              </div>
+              <div class="docs-practice__result-mt">
+                <div class="docs-practice__result-label">🖥️ Resultado</div>
+                <div class="docs-practice__result">
+                  <div
+                    class="docs-practice__result-content"
+                    class="docs-result-empty"
+                  >
+                    El resultado aparecerá aquí...
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
-  </main>
-</div>
 
-<label for="sidebar-css-toggle" class="docs-toggle">☰</label>
-</body>
+    <label for="sidebar-css-toggle" class="docs-toggle">☰</label>
+  </body>
 </html>

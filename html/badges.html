@@ -1,99 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Badges — Real Madrid CSS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/docs.css">
-  <link rel="icon" href="../imagenes/logomadrid.png">
-</head>
-<body data-page="badges">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Badges — Real Madrid CSS</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/docs.css" />
+    <link rel="icon" href="../imagenes/logomadrid.png" />
+  </head>
+  <body data-page="badges">
+    <input
+      type="checkbox"
+      id="sidebar-css-toggle"
+      class="docs-sidebar-toggle"
+    />
+    <div class="docs-layout">
+      <nav class="docs-sidebar" id="docs-sidebar">
+        <div class="docs-sidebar__logo">
+          <img
+            src="../imagenes/logomadrid.png"
+            alt="RM"
+            style="width: 28px; height: 28px; object-fit: contain"
+          />
 
-<input type="checkbox" id="sidebar-css-toggle" class="docs-sidebar-toggle">
-<div class="docs-layout">
-  <nav class="docs-sidebar" id="docs-sidebar"><div class="docs-sidebar__logo">
- <img src="../imagenes/logomadrid.png" alt="RM" style="width:28px; height:28px; object-fit:contain;">
-
-<span style="width:1px; height:36px; background:rgba(255,255,255,0.3); display:inline-block; margin:0 6px;"></span>
-   <img src="../imagenes/parche.png" alt="RM" style="width:28px; height:28px; object-fit:contain;">
-  <div class="docs-sidebar__logo-text">
-    Real Madrid CSS
-    <span>Framework Docs</span>
-  </div>
-</div>
-<div class="docs-sidebar__section">Inicio</div>
-<ul class="docs-sidebar__nav">
-  <li><a href="../index.html" class="nav-link "><span class="nav-icon">🏠</span> Introducción</a></li>
-</ul>
-<div class="docs-sidebar__section">Componentes</div>
-<ul class="docs-sidebar__nav">
-  <li><a href="buttons.html" class="nav-link "><span class="nav-icon">🔘</span> Botones</a></li>
-  <li><a href="cards.html" class="nav-link "><span class="nav-icon">🃏</span> Cards</a></li>
-  <li><a href="navbar.html" class="nav-link "><span class="nav-icon">🔝</span> Navbar</a></li>
-  <li><a href="alerts.html" class="nav-link "><span class="nav-icon">🔔</span> Alertas</a></li>
-  <li><a href="badges.html" class="nav-link active"><span class="nav-icon">🏷️</span> Badges</a></li>
-  <li><a href="forms.html" class="nav-link "><span class="nav-icon">📝</span> Formularios</a></li>
-  <li><a href="tables.html" class="nav-link "><span class="nav-icon">📊</span> Tablas</a></li>
-</ul>
-<div class="docs-sidebar__section">Layout</div>
-<ul class="docs-sidebar__nav">
-  <li><a href="grid.html" class="nav-link "><span class="nav-icon">⚙️</span> Grid System</a></li>
-</ul>
-<div class="docs-sidebar__section">Utilidades</div>
-<ul class="docs-sidebar__nav">
-  <li><a href="helpers.html" class="nav-link "><span class="nav-icon">🛠️</span> Helpers</a></li>
-  <li><a href="football.html" class="nav-link "><span class="nav-icon">⚽</span> Modo Fútbol</a></li>
-</ul></nav>
-  <main class="docs-main">
-    <header class="docs-page-header" data-icon="🏷️">
-      <div class="docs-page-header__badge">Componente</div>
-      <h1>Badges</h1>
-      <p>Etiquetas pequeñas para categorizar, etiquetar o mostrar contadores. Con variante pill para bordes redondeados.</p>
-    </header>
-    <div class="docs-content">
-
-      <div class="docs-section" id="variantes">
-        <div class="docs-section__title">Variantes y Pill</div>
-        <div class="docs-demo">
-          <div class="docs-demo__label">👁️ <span>Vista previa</span></div>
-          <div class="docs-demo__preview">
-            <span class="badge badge--secondary">Secondary</span>
-            <span class="badge badge--accent">Accent</span>
-            <span class="badge badge--danger">Danger</span>
-            <span class="badge badge--secondary badge--pill">Pill</span>
-            <span class="badge badge--accent badge--pill">Pill Accent</span>
+          <span
+            style="
+              width: 1px;
+              height: 36px;
+              background: rgba(255, 255, 255, 0.3);
+              display: inline-block;
+              margin: 0 6px;
+            "
+          ></span>
+          <img
+            src="../imagenes/parche.png"
+            alt="RM"
+            style="width: 28px; height: 28px; object-fit: contain"
+          />
+          <div class="docs-sidebar__logo-text">
+            Real Madrid CSS
+            <span>Framework Docs</span>
           </div>
-          <div class="docs-code">
-            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
-            <pre>&lt;span class="badge badge--secondary"&gt;Secondary&lt;/span&gt;
+        </div>
+        <div class="docs-sidebar__section">Inicio</div>
+        <ul class="docs-sidebar__nav">
+          <li>
+            <a href="../index.html" class="nav-link"
+              ><span class="nav-icon">🏠</span> Introducción</a
+            >
+          </li>
+        </ul>
+        <div class="docs-sidebar__section">Componentes</div>
+        <ul class="docs-sidebar__nav">
+          <li>
+            <a href="buttons.html" class="nav-link"
+              ><span class="nav-icon">🔘</span> Botones</a
+            >
+          </li>
+          <li>
+            <a href="cards.html" class="nav-link"
+              ><span class="nav-icon">🃏</span> Cards</a
+            >
+          </li>
+          <li>
+            <a href="navbar.html" class="nav-link"
+              ><span class="nav-icon">🔝</span> Navbar</a
+            >
+          </li>
+          <li>
+            <a href="alerts.html" class="nav-link"
+              ><span class="nav-icon">🔔</span> Alertas</a
+            >
+          </li>
+          <li>
+            <a href="badges.html" class="nav-link active"
+              ><span class="nav-icon">🏷️</span> Badges</a
+            >
+          </li>
+          <li>
+            <a href="forms.html" class="nav-link"
+              ><span class="nav-icon">📝</span> Formularios</a
+            >
+          </li>
+          <li>
+            <a href="tables.html" class="nav-link"
+              ><span class="nav-icon">📊</span> Tablas</a
+            >
+          </li>
+        </ul>
+        <div class="docs-sidebar__section">Layout</div>
+        <ul class="docs-sidebar__nav">
+          <li>
+            <a href="grid.html" class="nav-link"
+              ><span class="nav-icon">⚙️</span> Grid System</a
+            >
+          </li>
+        </ul>
+        <div class="docs-sidebar__section">Utilidades</div>
+        <ul class="docs-sidebar__nav">
+          <li>
+            <a href="helpers.html" class="nav-link"
+              ><span class="nav-icon">🛠️</span> Helpers</a
+            >
+          </li>
+          <li>
+            <a href="football.html" class="nav-link"
+              ><span class="nav-icon">⚽</span> Modo Fútbol</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <main class="docs-main">
+        <header class="docs-page-header" data-icon="🏷️">
+          <div class="docs-page-header__badge">Componente</div>
+          <h1>Badges</h1>
+          <p>
+            Etiquetas pequeñas para categorizar, etiquetar o mostrar contadores.
+            Con variante pill para bordes redondeados.
+          </p>
+        </header>
+        <div class="docs-content">
+          <div class="docs-section" id="variantes">
+            <div class="docs-section__title">Variantes y Pill</div>
+            <div class="docs-demo">
+              <div class="docs-demo__label">👁️ <span>Vista previa</span></div>
+              <div class="docs-demo__preview">
+                <span class="badge badge--secondary">Secondary</span>
+                <span class="badge badge--accent">Accent</span>
+                <span class="badge badge--danger">Danger</span>
+                <span class="badge badge--secondary badge--pill">Pill</span>
+                <span class="badge badge--accent badge--pill">Pill Accent</span>
+              </div>
+              <div class="docs-code">
+                <div class="docs-code__header">
+                  <span class="docs-code__lang">HTML</span>
+                </div>
+                <pre>
+&lt;span class="badge badge--secondary"&gt;Secondary&lt;/span&gt;
 &lt;span class="badge badge--accent"&gt;Accent&lt;/span&gt;
 &lt;span class="badge badge--danger"&gt;Danger&lt;/span&gt;
 &lt;!-- Pill = bordes redondeados --&gt;
-&lt;span class="badge badge--secondary badge--pill"&gt;Pill&lt;/span&gt;</pre>
-          </div>
-        </div>
-      </div>
-
-      <div class="docs-section" id="uso-real">
-        <div class="docs-section__title">Uso en componentes</div>
-        <div class="docs-demo">
-          <div class="docs-demo__label">👁️ <span>Vista previa</span> — badge dentro de card</div>
-          <div class="docs-demo__preview" class="docs-demo__preview--bg">
-            <div class="card" class="rm-card-demo--sm">
-              <div class="card__body">
-                <div class="docs-badge-header">
-                  <div class="card__title" >Vinícius Jr.</div>
-                  <span class="badge badge--accent badge--pill">7</span>
-                </div>
-                <p class="card__text">Extremo izquierdo · Brasil</p>
-                <span class="badge badge--secondary">Titular</span>
+&lt;span class="badge badge--secondary badge--pill"&gt;Pill&lt;/span&gt;</pre
+                >
               </div>
             </div>
           </div>
-          <div class="docs-code">
-            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
-            <pre>&lt;div class="card"&gt;
+
+          <div class="docs-section" id="uso-real">
+            <div class="docs-section__title">Uso en componentes</div>
+            <div class="docs-demo">
+              <div class="docs-demo__label">
+                👁️ <span>Vista previa</span> — badge dentro de card
+              </div>
+              <div class="docs-demo__preview" class="docs-demo__preview--bg">
+                <div class="card" class="rm-card-demo--sm">
+                  <div class="card__body">
+                    <div class="docs-badge-header">
+                      <div class="card__title">Vinícius Jr.</div>
+                      <span class="badge badge--accent badge--pill">7</span>
+                    </div>
+                    <p class="card__text">Extremo izquierdo · Brasil</p>
+                    <span class="badge badge--secondary">Titular</span>
+                  </div>
+                </div>
+              </div>
+              <div class="docs-code">
+                <div class="docs-code__header">
+                  <span class="docs-code__lang">HTML</span>
+                </div>
+                <pre>
+&lt;div class="card"&gt;
   &lt;div class="card__body"&gt;
     &lt;div style="display:flex; justify-content:space-between;"&gt;
       &lt;div class="card__title"&gt;Vinícius Jr.&lt;/div&gt;
@@ -102,41 +182,64 @@
     &lt;p class="card__text"&gt;Extremo · Brasil&lt;/p&gt;
     &lt;span class="badge badge--secondary"&gt;Titular&lt;/span&gt;
   &lt;/div&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;</pre
+                >
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="docs-section" id="practica">
-        <div class="docs-section__title">🏋️ Práctica</div>
-        <div class="docs-practice">
-          <div class="docs-practice__header">
-            <div class="docs-practice__icon">⚡</div>
-            <div><div class="docs-practice__title">Ejercicio — Plantilla con dorsales</div><div class="docs-practice__sub">Nivel: Principiante · 5 min</div></div>
-          </div>
-          <ol>
-            <li>Crea 5 badges pill con los dorsales del 1 al 5</li>
-            <li>Usa <code>badge--secondary</code> para los 3 primeros y <code>badge--accent</code> para los últimos 2</li>
-            <li>Colócalos dentro de una card con título "Dorsales disponibles"</li>
-          </ol>
-          <div class="docs-practice__editor">
-            <div class="docs-practice__editor-bar"><span class="docs-practice__editor-label">✏️ Tu código</span></div>
-            <textarea placeholder="&lt;div class=&quot;card p-3&quot;&gt;
-  &lt;div class=&quot;card__title&quot;&gt;Dorsales disponibles&lt;/div&gt;
+          <div class="docs-section" id="practica">
+            <div class="docs-section__title">🏋️ Práctica</div>
+            <div class="docs-practice">
+              <div class="docs-practice__header">
+                <div class="docs-practice__icon">⚡</div>
+                <div>
+                  <div class="docs-practice__title">
+                    Ejercicio — Plantilla con dorsales
+                  </div>
+                  <div class="docs-practice__sub">
+                    Nivel: Principiante · 5 min
+                  </div>
+                </div>
+              </div>
+              <ol>
+                <li>Crea 5 badges pill con los dorsales del 1 al 5</li>
+                <li>
+                  Usa <code>badge--secondary</code> para los 3 primeros y
+                  <code>badge--accent</code> para los últimos 2
+                </li>
+                <li>
+                  Colócalos dentro de una card con título "Dorsales disponibles"
+                </li>
+              </ol>
+              <div class="docs-practice__editor">
+                <div class="docs-practice__editor-bar">
+                  <span class="docs-practice__editor-label">✏️ Tu código</span>
+                </div>
+                <textarea
+                  placeholder='&lt;div class="card p-3"&gt;
+  &lt;div class="card__title"&gt;Dorsales disponibles&lt;/div&gt;
   &lt;!-- badges aquí --&gt;
-&lt;/div&gt;"></textarea>
-          </div>
-          <div class="docs-practice__result-mt">
-            <div class="docs-practice__result-label">🖥️ Resultado</div>
-            <div class="docs-practice__result"><div class="docs-practice__result-content" class="docs-result-empty">El resultado aparecerá aquí...</div></div>
+&lt;/div&gt;'
+                ></textarea>
+              </div>
+              <div class="docs-practice__result-mt">
+                <div class="docs-practice__result-label">🖥️ Resultado</div>
+                <div class="docs-practice__result">
+                  <div
+                    class="docs-practice__result-content"
+                    class="docs-result-empty"
+                  >
+                    El resultado aparecerá aquí...
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
+      </main>
     </div>
-  </main>
-</div>
 
-<label for="sidebar-css-toggle" class="docs-toggle">☰</label>
-</body>
+    <label for="sidebar-css-toggle" class="docs-toggle">☰</label>
+  </body>
 </html>

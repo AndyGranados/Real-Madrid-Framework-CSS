@@ -1,109 +1,240 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar — Real Madrid CSS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/docs.css">
-  <link rel="icon" href="../imagenes/logomadrid.png">
-</head>
-<body data-page="navbar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar — Real Madrid CSS</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/docs.css" />
+    <link rel="icon" href="../imagenes/logomadrid.png" />
+  </head>
+  <body data-page="navbar">
+    <input
+      type="checkbox"
+      id="sidebar-css-toggle"
+      class="docs-sidebar-toggle"
+    />
+    <div class="docs-layout">
+      <nav class="docs-sidebar" id="docs-sidebar">
+        <div class="docs-sidebar__logo">
+          <img
+            src="../imagenes/logomadrid.png"
+            alt="RM"
+            style="width: 28px; height: 28px; object-fit: contain"
+          />
 
-<input type="checkbox" id="sidebar-css-toggle" class="docs-sidebar-toggle">
-<div class="docs-layout">
-  <nav class="docs-sidebar" id="docs-sidebar"><div class="docs-sidebar__logo">
-  <img src="../imagenes/logomadrid.png" alt="RM" style="width:28px; height:28px; object-fit:contain;">
+          <span
+            style="
+              width: 1px;
+              height: 36px;
+              background: rgba(255, 255, 255, 0.3);
+              display: inline-block;
+              margin: 0 6px;
+            "
+          ></span>
+          <img
+            src="../imagenes/parche.png"
+            alt="RM"
+            style="width: 28px; height: 28px; object-fit: contain"
+          />
+          <div class="docs-sidebar__logo-text">
+            Real Madrid CSS
+            <span>Framework Docs</span>
+          </div>
+        </div>
 
-<span style="width:1px; height:36px; background:rgba(255,255,255,0.3); display:inline-block; margin:0 6px;"></span>
-   <img src="../imagenes/parche.png" alt="RM" style="width:28px; height:28px; object-fit:contain;">
-  <div class="docs-sidebar__logo-text">
-    Real Madrid CSS
-    <span>Framework Docs</span>
-  </div>
-</div>
+        <div class="docs-sidebar__section">Inicio</div>
+        <ul class="docs-sidebar__nav">
+          <li>
+            <a href="../index.html" class="nav-link"
+              ><span class="nav-icon">🏠</span> Introducción</a
+            >
+          </li>
+        </ul>
 
-<div class="docs-sidebar__section">Inicio</div>
-<ul class="docs-sidebar__nav">
-  <li><a href="../index.html" class="nav-link "><span class="nav-icon">🏠</span> Introducción</a></li>
-</ul>
+        <div class="docs-sidebar__section">Componentes</div>
+        <ul class="docs-sidebar__nav">
+          <li>
+            <a href="buttons.html" class="nav-link"
+              ><span class="nav-icon">🔘</span> Botones</a
+            >
+          </li>
+          <li>
+            <a href="cards.html" class="nav-link"
+              ><span class="nav-icon">🃏</span> Cards</a
+            >
+          </li>
+          <li>
+            <a href="navbar.html" class="nav-link active"
+              ><span class="nav-icon">🔝</span> Navbar</a
+            >
+          </li>
+          <li>
+            <a href="alerts.html" class="nav-link"
+              ><span class="nav-icon">🔔</span> Alertas</a
+            >
+          </li>
+          <li>
+            <a href="badges.html" class="nav-link"
+              ><span class="nav-icon">🏷️</span> Badges</a
+            >
+          </li>
+          <li>
+            <a href="forms.html" class="nav-link"
+              ><span class="nav-icon">📝</span> Formularios</a
+            >
+          </li>
+          <li>
+            <a href="tables.html" class="nav-link"
+              ><span class="nav-icon">📊</span> Tablas</a
+            >
+          </li>
+        </ul>
 
-<div class="docs-sidebar__section">Componentes</div>
-<ul class="docs-sidebar__nav">
-  <li><a href="buttons.html" class="nav-link "><span class="nav-icon">🔘</span> Botones</a></li>
-  <li><a href="cards.html" class="nav-link "><span class="nav-icon">🃏</span> Cards</a></li>
-  <li><a href="navbar.html" class="nav-link active"><span class="nav-icon">🔝</span> Navbar</a></li>
-  <li><a href="alerts.html" class="nav-link "><span class="nav-icon">🔔</span> Alertas</a></li>
-  <li><a href="badges.html" class="nav-link "><span class="nav-icon">🏷️</span> Badges</a></li>
-  <li><a href="forms.html" class="nav-link "><span class="nav-icon">📝</span> Formularios</a></li>
-  <li><a href="tables.html" class="nav-link "><span class="nav-icon">📊</span> Tablas</a></li>
-</ul>
+        <div class="docs-sidebar__section">Layout</div>
+        <ul class="docs-sidebar__nav">
+          <li>
+            <a href="grid.html" class="nav-link"
+              ><span class="nav-icon">⚙️</span> Grid System</a
+            >
+          </li>
+        </ul>
 
-<div class="docs-sidebar__section">Layout</div>
-<ul class="docs-sidebar__nav">
-  <li><a href="grid.html" class="nav-link "><span class="nav-icon">⚙️</span> Grid System</a></li>
-</ul>
+        <div class="docs-sidebar__section">Utilidades</div>
+        <ul class="docs-sidebar__nav">
+          <li>
+            <a href="helpers.html" class="nav-link"
+              ><span class="nav-icon">🛠️</span> Helpers</a
+            >
+          </li>
+          <li>
+            <a href="football.html" class="nav-link"
+              ><span class="nav-icon">⚽</span> Modo Fútbol</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <main class="docs-main">
+        <header class="docs-page-header" data-icon="🔝">
+          <div class="docs-page-header__badge">Componente</div>
+          <h1>Navbar</h1>
+          <p>
+            Barra de navegación responsiva con hamburger
+            <strong>CSS-only</strong> — sin JavaScript. Gradiente azul Madrid,
+            brand dorado y animación X al abrir.
+          </p>
+        </header>
 
-<div class="docs-sidebar__section">Utilidades</div>
-<ul class="docs-sidebar__nav">
-  <li><a href="helpers.html" class="nav-link "><span class="nav-icon">🛠️</span> Helpers</a></li>
-  <li><a href="football.html" class="nav-link "><span class="nav-icon">⚽</span> Modo Fútbol</a></li>
-</ul></nav>
-  <main class="docs-main">
-    <header class="docs-page-header" data-icon="🔝">
-      <div class="docs-page-header__badge">Componente</div>
-      <h1>Navbar</h1>
-      <p>Barra de navegación responsiva con hamburger <strong>CSS-only</strong> — sin JavaScript. Gradiente azul Madrid, brand dorado y animación X al abrir.</p>
-    </header>
+        <div class="docs-content">
+          <div class="docs-section" id="estructura">
+            <div class="docs-section__title">Estructura BEM</div>
+            <table class="docs-props">
+              <thead>
+                <tr>
+                  <th>Clase / Elemento</th>
+                  <th>Descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>.navbar</code></td>
+                  <td>Barra completa — gradiente azul, sombra</td>
+                </tr>
+                <tr>
+                  <td><code>.navbar__container</code></td>
+                  <td>Contenedor flex interno (max 1200px)</td>
+                </tr>
+                <tr>
+                  <td><code>.navbar__brand</code></td>
+                  <td>Logo/nombre en dorado, 1.6rem, bold</td>
+                </tr>
+                <tr>
+                  <td><code>.navbar__toggle-check</code></td>
+                  <td>
+                    <code>input[type=checkbox]</code> oculto — controla el menú
+                    móvil
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>.navbar__toggle-label</code></td>
+                  <td>
+                    Ícono hamburger visible solo en móvil. Contiene 3
+                    <code>&lt;span&gt;</code>
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>.navbar__nav</code></td>
+                  <td>Lista de links — columna en móvil, fila en md+</td>
+                </tr>
+                <tr>
+                  <td><code>.navbar__link</code></td>
+                  <td>Link con subrayado dorado animado al hover</td>
+                </tr>
+                <tr>
+                  <td><code>.navbar__link--active</code></td>
+                  <td>Modificador para marcar página actual</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-    <div class="docs-content">
-      <div class="docs-section" id="estructura">
-        <div class="docs-section__title">Estructura BEM</div>
-        <table class="docs-props">
-          <thead><tr><th>Clase / Elemento</th><th>Descripción</th></tr></thead>
-          <tbody>
-            <tr><td><code>.navbar</code></td><td>Barra completa — gradiente azul, sombra</td></tr>
-            <tr><td><code>.navbar__container</code></td><td>Contenedor flex interno (max 1200px)</td></tr>
-            <tr><td><code>.navbar__brand</code></td><td>Logo/nombre en dorado, 1.6rem, bold</td></tr>
-            <tr><td><code>.navbar__toggle-check</code></td><td><code>input[type=checkbox]</code> oculto — controla el menú móvil</td></tr>
-            <tr><td><code>.navbar__toggle-label</code></td><td>Ícono hamburger visible solo en móvil. Contiene 3 <code>&lt;span&gt;</code></td></tr>
-            <tr><td><code>.navbar__nav</code></td><td>Lista de links — columna en móvil, fila en md+</td></tr>
-            <tr><td><code>.navbar__link</code></td><td>Link con subrayado dorado animado al hover</td></tr>
-            <tr><td><code>.navbar__link--active</code></td><td>Modificador para marcar página actual</td></tr>
-          </tbody>
-        </table>
-      </div>
-      
-      <div class="docs-section" id="demo">
-        <div class="docs-section__title">Vista previa — Desktop</div>
-        <div class="docs-demo">
-          <div class="docs-demo__label">👁️ <span>Vista previa</span> — pasa el cursor por los links</div>
-          <div class="docs-demo__preview--block" class="docs-navbar-preview">
-            <nav class="navbar">
-              <input type="checkbox" class="navbar__toggle-check" id="demo-nav-toggle">
-              <div class="navbar__container">
-                <a href="#" class="navbar__brand">⚽ Madrid CSS</a>
-                <label class="navbar__toggle-label" for="demo-nav-toggle">
-                  <span></span><span></span><span></span>
-                </label>
-                <ul class="navbar__nav">
-                  <li><a href="#" class="navbar__link navbar__link--active">Inicio</a></li>
-                  <li><a href="#" class="navbar__link">Componentes</a></li>
-                  <li><a href="#" class="navbar__link">Grid</a></li>
-                  <li><a href="#" class="navbar__link">⚽ Fútbol</a></li>
-                </ul>
+          <div class="docs-section" id="demo">
+            <div class="docs-section__title">Vista previa — Desktop</div>
+            <div class="docs-demo">
+              <div class="docs-demo__label">
+                👁️ <span>Vista previa</span> — pasa el cursor por los links
               </div>
-            </nav>
-          </div>
+              <div
+                class="docs-demo__preview--block"
+                class="docs-navbar-preview"
+              >
+                <nav class="navbar">
+                  <input
+                    type="checkbox"
+                    class="navbar__toggle-check"
+                    id="demo-nav-toggle"
+                  />
+                  <div class="navbar__container">
+                    <a href="#" class="navbar__brand">⚽ Madrid CSS</a>
+                    <label class="navbar__toggle-label" for="demo-nav-toggle">
+                      <span></span><span></span><span></span>
+                    </label>
+                    <ul class="navbar__nav">
+                      <li>
+                        <a href="#" class="navbar__link navbar__link--active"
+                          >Inicio</a
+                        >
+                      </li>
+                      <li><a href="#" class="navbar__link">Componentes</a></li>
+                      <li><a href="#" class="navbar__link">Grid</a></li>
+                      <li><a href="#" class="navbar__link">⚽ Fútbol</a></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
 
-          <div class="docs-callout docs-callout--info" class="docs-practice__result-mt">
-            <span class="docs-callout__icon">📱</span>
-            <div>En pantallas menores a 768px aparece el ícono <strong>☰ hamburger</strong>. Haz click para desplegar el menú — funciona <strong>sin JavaScript</strong>.</div>
-          </div>
+              <div
+                class="docs-callout docs-callout--info"
+                class="docs-practice__result-mt"
+              >
+                <span class="docs-callout__icon">📱</span>
+                <div>
+                  En pantallas menores a 768px aparece el ícono
+                  <strong>☰ hamburger</strong>. Haz click para desplegar el
+                  menú — funciona <strong>sin JavaScript</strong>.
+                </div>
+              </div>
 
-          <div class="docs-code">
-            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
-            <pre>&lt;nav class="navbar"&gt;
+              <div class="docs-code">
+                <div class="docs-code__header">
+                  <span class="docs-code__lang">HTML</span>
+                </div>
+                <pre>
+&lt;nav class="navbar"&gt;
 
   &lt;!-- Checkbox oculto: controla apertura del menú --&gt;
   &lt;input type="checkbox" class="navbar__toggle-check" id="nav-toggle"&gt;
@@ -128,42 +259,75 @@
     &lt;/ul&gt;
 
   &lt;/div&gt;
-&lt;/nav&gt;</pre>
-          </div>
-        </div>
-      </div>
-   
-      <div class="docs-section" id="como-funciona">
-        <div class="docs-section__title">¿Cómo funciona sin JavaScript?</div>
-        <p class="docs-section__desc">El truco usa el selector CSS <code>:checked</code> combinado con el selector de hermano adyacente <code>~</code>. Cuando el usuario hace click en el <code>&lt;label&gt;</code>, marca el <code>input[type=checkbox]</code> oculto. CSS detecta ese estado y cambia el <code>display</code> del menú.</p>
-        <div class="docs-callout docs-callout--info">
-          <span class="docs-callout__icon">💡</span>
-          <div>
-            <strong>El selector clave:</strong><br>
-            <code>.navbar__toggle-check:checked ~ .navbar__container .navbar__nav { display: flex; }</code><br><br>
-            Cuando el checkbox tiene <code>:checked</code>, el menú pasa de <code>display:none</code> a <code>display:flex</code>. Las 3 líneas del hamburger se animan a una X con <code>transform: rotate()</code>.
-          </div>
-        </div>
-      </div>
-      
-      <div class="docs-section" id="practica">
-        <div class="docs-section__title">🏋️ Práctica</div>
-        <div class="docs-practice">
-          <div class="docs-practice__header">
-            <div class="docs-practice__icon">⚡</div>
-            <div><div class="docs-practice__title">Ejercicio — Navbar de club</div><div class="docs-practice__sub">Nivel: Principiante · 5 min</div></div>
+&lt;/nav&gt;</pre
+                >
+              </div>
+            </div>
           </div>
 
-          <ol>
-            <li>Crea una navbar con el brand <strong>"Club Deportivo"</strong></li>
-            <li>Agrega 4 links: Inicio (activo), Plantilla, Resultados, Contacto</li>
-            <li>Asegúrate de incluir el <code>input</code> y el <code>label</code> para el hamburger</li>
-            <li>Reduce el tamaño de la ventana para ver el menú móvil</li>
-          </ol>
+          <div class="docs-section" id="como-funciona">
+            <div class="docs-section__title">
+              ¿Cómo funciona sin JavaScript?
+            </div>
+            <p class="docs-section__desc">
+              El truco usa el selector CSS <code>:checked</code> combinado con
+              el selector de hermano adyacente <code>~</code>. Cuando el usuario
+              hace click en el <code>&lt;label&gt;</code>, marca el
+              <code>input[type=checkbox]</code> oculto. CSS detecta ese estado y
+              cambia el <code>display</code> del menú.
+            </p>
+            <div class="docs-callout docs-callout--info">
+              <span class="docs-callout__icon">💡</span>
+              <div>
+                <strong>El selector clave:</strong><br />
+                <code
+                  >.navbar__toggle-check:checked ~ .navbar__container
+                  .navbar__nav { display: flex; }</code
+                ><br /><br />
+                Cuando el checkbox tiene <code>:checked</code>, el menú pasa de
+                <code>display:none</code> a <code>display:flex</code>. Las 3
+                líneas del hamburger se animan a una X con
+                <code>transform: rotate()</code>.
+              </div>
+            </div>
+          </div>
 
-          <div class="docs-practice__editor">
-            <div class="docs-practice__editor-bar"><span class="docs-practice__editor-label">✏️ Tu código</span></div>
-            <textarea placeholder='&lt;nav class="navbar"&gt;
+          <div class="docs-section" id="practica">
+            <div class="docs-section__title">🏋️ Práctica</div>
+            <div class="docs-practice">
+              <div class="docs-practice__header">
+                <div class="docs-practice__icon">⚡</div>
+                <div>
+                  <div class="docs-practice__title">
+                    Ejercicio — Navbar de club
+                  </div>
+                  <div class="docs-practice__sub">
+                    Nivel: Principiante · 5 min
+                  </div>
+                </div>
+              </div>
+
+              <ol>
+                <li>
+                  Crea una navbar con el brand <strong>"Club Deportivo"</strong>
+                </li>
+                <li>
+                  Agrega 4 links: Inicio (activo), Plantilla, Resultados,
+                  Contacto
+                </li>
+                <li>
+                  Asegúrate de incluir el <code>input</code> y el
+                  <code>label</code> para el hamburger
+                </li>
+                <li>Reduce el tamaño de la ventana para ver el menú móvil</li>
+              </ol>
+
+              <div class="docs-practice__editor">
+                <div class="docs-practice__editor-bar">
+                  <span class="docs-practice__editor-label">✏️ Tu código</span>
+                </div>
+                <textarea
+                  placeholder='&lt;nav class="navbar"&gt;
   &lt;input type="checkbox" class="navbar__toggle-check" id="mi-toggle"&gt;
   &lt;div class="navbar__container"&gt;
     &lt;a href="#" class="navbar__brand"&gt;Club Deportivo&lt;/a&gt;
@@ -174,19 +338,27 @@
       &lt;!-- tus links aquí --&gt;
     &lt;/ul&gt;
   &lt;/div&gt;
-&lt;/nav&gt;'></textarea>
-          </div>
+&lt;/nav&gt;'
+                ></textarea>
+              </div>
 
-          <div class="docs-practice__result-mt">
-            <div class="docs-practice__result-label">🖥️ Resultado</div>
-            <div class="docs-practice__result"><div class="docs-practice__result-content" class="docs-result-empty">El resultado aparecerá aquí...</div></div>
+              <div class="docs-practice__result-mt">
+                <div class="docs-practice__result-label">🖥️ Resultado</div>
+                <div class="docs-practice__result">
+                  <div
+                    class="docs-practice__result-content"
+                    class="docs-result-empty"
+                  >
+                    El resultado aparecerá aquí...
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
-  </main>
-</div>
 
-<label for="sidebar-css-toggle" class="docs-toggle">☰</label>
-</body>
+    <label for="sidebar-css-toggle" class="docs-toggle">☰</label>
+  </body>
 </html>
