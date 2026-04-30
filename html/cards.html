@@ -23,6 +23,7 @@
       <nav class="docs-sidebar" id="docs-sidebar">
         <div class="docs-sidebar__logo">
           <div class="docs-sidebar__logo-icon">RM</div>
+           <img src="../imagenes/Real_Madrid_CF.svg" alt="RM" style="width:28px; height:28px; object-fit:contain;">
           <div class="docs-sidebar__logo-text">
             Real Madrid CSS
             <span>Framework Docs</span>
@@ -308,62 +309,58 @@
               </div>
             </div>
           </div>
-
-          <div class="docs-section" id="grid-cards">
-            <div class="docs-section__title">Grid de cards</div>
-            <p class="docs-section__desc">
-              Combina las cards con el sistema de grid para crear layouts
-              responsivos.
-            </p>
-            <div class="docs-demo">
-              <div class="docs-demo__label">
-                👁️ <span>Vista previa</span> — 3 columnas en desktop
-              </div>
-              <div
-                class="docs-demo__preview--block"
-                class="docs-demo__preview--bg"
-              >
-                <div class="rm-fila" class="docs-cards-grid">
-                  <div class="col-12 col-md-4" class="docs-cards-grid__col">
-                    <div class="card">
-                      <div class="card__body">
-                        <div class="card__title">Portero</div>
-                        <p class="card__text">
-                          El guardián de la portería del equipo blanco.
-                        </p>
-                        <span class="badge badge--secondary">GK</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-4" class="docs-cards-grid__col">
-                    <div class="card">
-                      <div class="card__body">
-                        <div class="card__title">Defensa</div>
-                        <p class="card__text">
-                          La línea defensiva que protege la portería.
-                        </p>
-                        <span class="badge badge--secondary">DEF</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-4" class="docs-cards-grid__col">
-                    <div class="card">
-                      <div class="card__body">
-                        <div class="card__title">Delantero</div>
-                        <p class="card__text">
-                          El goleador que desequilibra al rival.
-                        </p>
-                        <span class="badge badge--accent">FWD</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="docs-code">
-                <div class="docs-code__header">
-                  <span class="docs-code__lang">HTML</span>
-                </div>
-                <pre>
+<div class="docs-section" id="grid-cards">
+  <div class="docs-section__title">Grid de cards</div>
+  <p class="docs-section__desc">
+    Combina las cards con el sistema de grid para crear layouts
+    responsivos.
+  </p>
+  <div class="docs-demo">
+    <div class="docs-demo__label">
+      👁️ <span>Vista previa</span> — 3 columnas en desktop
+    </div>
+    <div class="docs-demo__preview--block docs-demo__preview--bg">
+      <div class="rm-fila docs-cards-grid">
+        <div class="rm-col-12 rm-col-md-4 docs-cards-grid__col">
+          <div class="card">
+            <div class="card__body">
+              <div class="card__title">Portero</div>
+              <p class="card__text">
+                El guardián de la portería del equipo blanco.
+              </p>
+              <span class="badge badge--secondary">GK</span>
+            </div>
+          </div>
+        </div>
+        <div class="rm-col-12 rm-col-md-4 docs-cards-grid__col">
+          <div class="card">
+            <div class="card__body">
+              <div class="card__title">Defensa</div>
+              <p class="card__text">
+                La línea defensiva que protege la portería.
+              </p>
+              <span class="badge badge--secondary">DEF</span>
+            </div>
+          </div>
+        </div>
+        <div class="rm-col-12 rm-col-md-4 docs-cards-grid__col">
+          <div class="card">
+            <div class="card__body">
+              <div class="card__title">Delantero</div>
+              <p class="card__text">
+                El goleador que desequilibra al rival.
+              </p>
+              <span class="badge badge--accent">FWD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="docs-code">
+      <div class="docs-code__header">
+        <span class="docs-code__lang">HTML</span>
+      </div>
+      <pre>
 &lt;div class="rm-fila"&gt;
   &lt;div class="col-12 col-md-4"&gt;
     &lt;div class="card"&gt;
