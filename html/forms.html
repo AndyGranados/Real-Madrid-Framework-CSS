@@ -66,7 +66,7 @@
         <div class="docs-section__title">Todos los tipos de campo</div>
         <div class="docs-demo">
           <div class="docs-demo__label">👁️ <span>Vista previa</span> — haz click en los campos</div>
-          <div class="docs-demo__preview--block" class="docs-demo__preview--form">
+          <div class="docs-demo__preview--block" style="padding:1.5rem; max-width:500px;">
             <div class="form__group">
               <label class="form__label">Nombre del jugador</label>
               <input type="text" class="form__control" placeholder="Ej: Vinícius Jr.">
@@ -83,7 +83,7 @@
             </div>
           </div>
           <div class="docs-code">
-            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
+            <div class="docs-code__header"><span class="docs-code__lang">HTML</span><button class="docs-code__copy">Copiar</button></div>
             <pre>&lt;div class="form__group"&gt;
   &lt;label class="form__label"&gt;Nombre del jugador&lt;/label&gt;
   &lt;input type="text" class="form__control" placeholder="Ej: Vinícius Jr."&gt;
@@ -106,51 +106,84 @@
       </div>
 
       <div class="docs-section" id="form-completo">
-        <div class="docs-section__title">Formulario completo en card</div>
-        <div class="docs-demo">
-          <div class="docs-demo__label">👁️ <span>Vista previa</span> — formulario de inscripción</div>
-          <div class="docs-demo__preview--block" class="docs-demo__preview--bg">
-            <div class="card" class="rm-card-demo--form">
-              <div class="card__body">
-                <div class="card__title">Inscripción de Jugador</div>
-                <p class="card__text" class="form__group">Completa los datos para registrar al jugador en la plantilla.</p>
-                <div class="rm-fila" class="docs-form-row">
-                  <div class="col-6" class="docs-form-col">
-                    <div class="form__group"><label class="form__label">Nombre</label><input type="text" class="form__control" placeholder="Nombre"></div>
-                  </div>
-                  <div class="col-6" class="docs-form-col">
-                    <div class="form__group"><label class="form__label">Apellido</label><input type="text" class="form__control" placeholder="Apellido"></div>
-                  </div>
-                </div>
-                <div class="form__group"><label class="form__label">Email del agente</label><input type="email" class="form__control" placeholder="agente@rm.com"></div>
-                <div class="form__group"><label class="form__label">Dorsal deseado</label><input type="number" class="form__control" placeholder="1–99" min="1" max="99"></div>
-                <button class="rm-btn rm-btn-azul rm-btn-md" class="rm-bloque rm-mt-2">Inscribir jugador</button>
+  <div class="docs-section__title">Formulario completo en card</div>
+  <div class="docs-demo">
+    <div class="docs-demo__label">👁️ <span>Vista previa</span> — formulario de inscripción</div>
+    <div class="docs-demo__preview--block docs-demo__preview--bg">
+      <div class="card rm-card-demo--form">
+        <div class="card__body">
+          <div class="card__title">Inscripción de Jugador</div>
+          <p class="card__text form__group">
+            Completa los datos para registrar al jugador en la plantilla.
+          </p>
+
+          <div class="row rm-fila docs-form-row">
+            <div class="col-6 docs-form-col">
+              <div class="form__group">
+                <label class="form__label">Nombre</label>
+                <input type="text" class="form__control" placeholder="Nombre">
+              </div>
+            </div>
+            <div class="col-6 docs-form-col">
+              <div class="form__group">
+                <label class="form__label">Apellido</label>
+                <input type="text" class="form__control" placeholder="Apellido">
               </div>
             </div>
           </div>
-          <div class="docs-code">
-            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
-            <pre>&lt;div class="card"&gt;
+
+          <div class="form__group">
+            <label class="form__label">Email del agente</label>
+            <input type="email" class="form__control" placeholder="agente@rm.com">
+          </div>
+
+          <div class="form__group">
+            <label class="form__label">Dorsal deseado</label>
+            <input type="number" class="form__control" placeholder="1–99" min="1" max="99">
+          </div>
+
+          <button class="rm-btn rm-btn-azul rm-btn-md rm-bloque rm-mt-2">
+            Inscribir jugador
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="docs-code">
+      <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
+      <pre>&lt;div class="card rm-card-demo--form"&gt;
   &lt;div class="card__body"&gt;
     &lt;div class="card__title"&gt;Inscripción de Jugador&lt;/div&gt;
-    &lt;div class="rm-fila"&gt;
-      &lt;div class="col-6"&gt;
+    &lt;p class="card__text form__group"&gt;Completa los datos...&lt;/p&gt;
+    &lt;div class="row rm-fila docs-form-row"&gt;
+      &lt;div class="col-6 docs-form-col"&gt;
         &lt;div class="form__group"&gt;
           &lt;label class="form__label"&gt;Nombre&lt;/label&gt;
-          &lt;input type="text" class="form__control"&gt;
+          &lt;input type="text" class="form__control" placeholder="Nombre"&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="col-6"&gt;...&lt;/div&gt;
+      &lt;div class="col-6 docs-form-col"&gt;
+        &lt;div class="form__group"&gt;
+          &lt;label class="form__label"&gt;Apellido&lt;/label&gt;
+          &lt;input type="text" class="form__control" placeholder="Apellido"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
-    &lt;button class="rm-btn rm-btn-azul rm-btn-md"&gt;
+    &lt;div class="form__group"&gt;
+      &lt;label class="form__label"&gt;Email del agente&lt;/label&gt;
+      &lt;input type="email" class="form__control" placeholder="agente@rm.com"&gt;
+    &lt;/div&gt;
+    &lt;div class="form__group"&gt;
+      &lt;label class="form__label"&gt;Dorsal deseado&lt;/label&gt;
+      &lt;input type="number" class="form__control" placeholder="1–99" min="1" max="99"&gt;
+    &lt;/div&gt;
+    &lt;button class="rm-btn rm-btn-azul rm-btn-md rm-bloque rm-mt-2"&gt;
       Inscribir jugador
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
-          </div>
-        </div>
-      </div>
-
+    </div>
+  </div>
+</div>
       
       <div class="docs-section" id="checkbox">
         <div class="docs-section__title">Checkboxes y Radio buttons</div>
@@ -189,48 +222,47 @@
         </div>
       </div>
 
-      
-      <div class="docs-section" id="validacion">
-        <div class="docs-section__title">Estados de validación</div>
-        <div class="docs-demo">
-          <div class="docs-demo__label">👁️ <span>Vista previa</span> — campo válido e inválido</div>
-          <div class="docs-demo__preview--block" class="docs-demo__preview--form">
-            <div class="form__group">
-              <label class="form__label">Nombre del jugador</label>
-              <input type="text" class="form__control form__control--valid" value="Vinícius Jr.">
-              <span class="form__feedback form__feedback--valid">✓ Jugador verificado en la plantilla</span>
-            </div>
-            <div class="form__group">
-              <label class="form__label">Dorsal</label>
-              <input type="number" class="form__control form__control--invalid" value="99">
-              <span class="form__feedback form__feedback--invalid">✗ Ese número ya está ocupado</span>
-            </div>
-          </div>
-          <div class="docs-code">
-            <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
-            <pre>&lt;!-- Campo válido --&gt;
+<div class="docs-section" id="validacion">
+  <div class="docs-section__title">Estados de validación</div>
+  <div class="docs-demo">
+    <div class="docs-demo__label">👁️ <span>Vista previa</span> — campo válido e inválido</div>
+    <div class="docs-demo__preview--block docs-demo__preview--form" style="padding:0 1.5rem; background:#fff;">
+      <div class="form__group">
+        <label class="form__label">Nombre del jugador</label>
+        <input type="text" class="form__control form__control--valid" value="Vinícius Jr.">
+        <span class="form__feedback form__feedback--valid">✓ Jugador verificado en la plantilla</span>
+      </div>
+      <div class="form__group">
+        <label class="form__label">Dorsal</label>
+        <input type="number" class="form__control form__control--invalid" value="99">
+        <span class="form__feedback form__feedback--invalid">✗ Ese número ya está ocupado</span>
+      </div>
+    </div>
+    <div class="docs-code">
+      <div class="docs-code__header"><span class="docs-code__lang">HTML</span></div>
+      <pre>&lt;!-- Campo válido --&gt;
 &lt;div class="form__group"&gt;
   &lt;label class="form__label"&gt;Nombre&lt;/label&gt;
-  &lt;input class="form__control form__control--valid" type="text"&gt;
-  &lt;span class="form__feedback form__feedback--valid"&gt;✓ Correcto&lt;/span&gt;
+  &lt;input class="form__control form__control--valid" type="text" value="Vinícius Jr."&gt;
+  &lt;span class="form__feedback form__feedback--valid"&gt;✓ Jugador verificado en la plantilla&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;!-- Campo inválido --&gt;
 &lt;div class="form__group"&gt;
   &lt;label class="form__label"&gt;Dorsal&lt;/label&gt;
-  &lt;input class="form__control form__control--invalid" type="number"&gt;
-  &lt;span class="form__feedback form__feedback--invalid"&gt;✗ Número ocupado&lt;/span&gt;
+  &lt;input class="form__control form__control--invalid" type="number" value="99"&gt;
+  &lt;span class="form__feedback form__feedback--invalid"&gt;✗ Ese número ya está ocupado&lt;/span&gt;
 &lt;/div&gt;</pre>
-          </div>
-        </div>
-      </div>
+    </div>
+  </div>
+</div>
 
-      <div class="docs-section" id="practica">
-        <div class="docs-section__title">🏋️ Práctica — Formularios</div>
-        <div class="docs-practice">
-          <div class="docs-practice__header">
-            <div class="docs-practice__icon">⚡</div>
-            <div><div class="docs-practice__title">Ejercicio — Ficha de fichaje</div><div class="docs-practice__sub">Nivel: Intermedio · 8 min</div></div>
+<div class="docs-section" id="practica">
+  <div class="docs-section__title">🏋️ Práctica — Formularios</div>
+    <div class="docs-practice">
+      <div class="docs-practice__header">
+        <div class="docs-practice__icon">⚡</div>
+          <div><div class="docs-practice__title">Ejercicio — Ficha de fichaje</div><div class="docs-practice__sub">Nivel: Intermedio · 8 min</div></div>
           </div>
           <ol>
             <li>Crea un formulario dentro de una <code>.card</code></li>
@@ -253,7 +285,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </main>
 </div>
